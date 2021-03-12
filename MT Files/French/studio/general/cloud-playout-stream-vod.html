@@ -1,0 +1,1344 @@
+﻿<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Dans cette rubrique, vous apprendrez comment une collection de vidéos VOD et d'événements en direct peut être diffusée comme un canal linéaire en direct.">
+  
+  <title>Utilisation de Cloud Playout pour diffuser des vidéos</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Video_Cloud_Logo.svg" alt="logo du produit" style="max-height: 100px;max-width: 232px;"/></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">Sélectionner la langue</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+    <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+      <option value="">Autres documents Brightcove</option>
+      
+        
+          <option value="https://support.brightcove.com">Accueil Documentation</option>
+        
+      
+        
+          <option value="https://audience.support.brightcove.com">Audience de Brightcove</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">Balise Brightcove</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">Campagne Brightcove</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">Brightcove Engagez</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+        
+      
+        
+          <option value="https://social.support.brightcove.com">Brightcove Social</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">Développement du joueur Brightcove</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">API de la plate-forme Video Cloud</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">SDK pour périphériques Video Cloud</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">Intégrations et connecteurs CMS</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">Informations générales sur Video Cloud</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+        
+      
+    </select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="assistance"/> Contactez le support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="état du système"/> État du système</a></span> <br/>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/general/">Informations générales</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Utilisation de Cloud Playout pour diffuser des vidéos</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav" id="side_nav">
+          
+            
+            <h5><a href="/index.html">Accueil</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/index.html">Mise en route <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/get-started/getting-started-video-cloud-studio.html">Démarrer avec Video Cloud Studio</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/getting-started-your-video-cloud-trial.html">Mise en route de votre essai de Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/navigating-brightcove-support-site.html">Navigation sur le site de support de Brightcove</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/quick-start-video-cloud.html">Démarrage rapide de Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/step-step-video-cloud-studio-publishing-workflow.html">Étape par étape : Workflow de publication Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">Formation : Présentation de Video Cloud Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud.html">Formation : Présentation de Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-video-cloud-basics.html">Formation : Principes de base du cloud vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/video-cloud-glossary.html">Glossaire Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/training/video-cloud-studio-training-videos.html">Vidéos de formation Video Cloud Studio</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/basics/index.html">Apprendre les bases <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-activating-and-deactivating-video.html">Activation et désactivation d'une vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-adding-user-video-cloud-account.html">Ajout d'un utilisateur à un compte Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html">Capture d'une affiche vidéo et d'images miniatures</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-manual-playlist.html">Création d'une liste de lecture manuelle</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-player.html">Création d'un lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-playlist-player.html">Création d'un lecteur de lecture</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-smart-playlist.html">Création d'une liste de lecture intelligente</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-determining-how-much-video-being-watched.html">Déterminer la quantité de visionnage d'une vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-determining-which-videos-have-most-views.html">Déterminer quelles vidéos ont le plus de vues</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-editing-basic-video-properties.html">Modification des propriétés vidéo de base</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-editing-video-properties-multiple-videos.html">Modification des propriétés vidéo pour plusieurs vidéos</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-organizing-videos-using-folders.html">Organisation des vidéos à l'aide de dossiers</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-publishing-playlist-web.html">Publication d'une liste de lecture sur le Web</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-publishing-single-video-web.html">Publication d'une seule vidéo sur le Web</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-styling-player.html">Coiffer un joueur</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html">Téléchargement d'une affiche vidéo et d'images miniatures</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-uploading-videos.html">Téléchargement de vidéos</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-viewing-brightcove-system-status-page.html">Affichage de la page État du système Brightcove</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/general/index.html">Informations générales <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/general/adding-facebook-button-brightcove-player.html">Ajout d'un bouton J'aime Facebook à un joueur</a></li>
+                  
+                
+                  
+                    <li><a href="/general/best-practices-video-creating-transcoding-and-uploading-workflow.html">Meilleures pratiques : Transcodage et téléchargement</a></li>
+                  
+                
+                  
+                    <li><a href="/general/content-delivery-options.html">Options de livraison de contenu</a></li>
+                  
+                
+                  
+                    <li><a href="/general/creating-audio-only-renditions-low-bandwidth-delivery.html">Création de formats associés audio uniquement</a></li>
+                  
+                
+                  
+                    <li><a href="/general/domains-and-ports-must-be-accessible-video-cloud.html">Domaines et ports qui doivent être accessibles</a></li>
+                  
+                
+                  
+                    <li><a href="/general/drm-output-protection-settings.html">Paramètres de protection de sortie DRM</a></li>
+                  
+                
+                  
+                    <li><a href="/general/enabling-longer-videos-youtube.html">Activation de vidéos plus longues sur YouTube</a></li>
+                  
+                
+                  
+                    <li><a href="/general/making-your-video-content-indexable.html">Rendre votre contenu vidéo indexable</a></li>
+                  
+                
+                  
+                    <li><a href="/general/optimal-video-dimensions.html">Dimensions vidéo optimales</a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-context-aware-encoding.html">Vue d'ensemble de l'encodage tenant compte du contexte</a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-digital-rights-management-drm-video-cloud.html">Vue d'ensemble : Gestion des droits numériques (DRM)</a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-dynamic-delivery.html">Vue d'ensemble de la livraison dynamique</a></li>
+                  
+                
+                  
+                    <li><a href="/general/protecting-videos-hls-encryption.html">Protection des vidéos avec le chiffrement HLS</a></li>
+                  
+                
+                  
+                    <li><a href="/general/resetting-your-studio-password.html">Réinitialisation de votre mot de passe Studio</a></li>
+                  
+                
+                  
+                    <li><a href="/general/sharing-videos-twitter-player-cards.html">Partage de vidéos sur les cartes de lecteur Twitter</a></li>
+                  
+                
+                  
+                    <li><a href="/general/studio-system-requirements.html">Configuration système requise pour Studio</a></li>
+                  
+                
+                  
+                    <li><a href="/general/supported-video-and-audio-formats-codecs-and-containers.html">Formats audio et vidéo pris en charge</a></li>
+                  
+                
+                  
+                    <li><a href="/general/tls-media-player-and-api-urls.html">URL TLS pour médias, lecteur et API</a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-cloud-architecture-overview.html">Présentation de l'architecture Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-cloud-studio-cookies.html">Cookies Video Cloud Studio</a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-source-file-specifications-and-recommendations.html">Spécifications et recommandations du fichier source vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-360deg-videos.html">Utilisation de vidéos à 360°</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-audio-content.html">Utilisation du contenu audio uniquement</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-multiple-video-cloud-accounts.html">Utilisation de plusieurs comptes</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/media/index.html">Gestion des vidéos <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/media/adding-audio-tracks-videos-using-media-module.html">Ajout de pistes audio aux vidéos</a></li>
+                  
+                
+                  
+                    <li><a href="/media/adding-captions-videos-using-media-module.html">Ajout de légendes aux vidéos</a></li>
+                  
+                
+                  
+                    <li><a href="/media/adding-chapters-video.html">Ajout de chapitres à une vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/media/capturing-poster-and-thumbnail-images.html">Capturer des images d'affiche et de vignettes</a></li>
+                  
+                
+                  
+                    <li><a href="/media/configuring-video-availability.html">Configuration de la disponibilité vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/media/creating-and-managing-playlists.html">Création et gestion des listes de lecture</a></li>
+                  
+                
+                  
+                    <li><a href="/media/downloading-videos-video-cloud.html">Téléchargement de vidéos à partir de Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/media/editing-video-properties-using-media-module.html">Modification des propriétés de la vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/media/editing-video-properties-using-quick-edit.html">Modification des propriétés à l'aide d'édition rapide</a></li>
+                  
+                
+                  
+                    <li><a href="/media/exporting-video-data.html">Exportation de données vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/media/getting-started-media-module.html">Démarrer avec le module multimédia</a></li>
+                  
+                
+                  
+                    <li><a href="/media/how-search-videos-and-playlists-media-module.html">Comment rechercher des vidéos et des listes de lecture</a></li>
+                  
+                
+                  
+                    <li><a href="/media/increasing-quality-poster-and-thumbnail-images.html">Améliorer la qualité des images des affiches</a></li>
+                  
+                
+                  
+                    <li><a href="/media/introduction-playlists.html">Présentation des listes de lecture</a></li>
+                  
+                
+                  
+                    <li><a href="/media/media-sharing-using-media-module.html">Partage de médias</a></li>
+                  
+                
+                  
+                    <li><a href="/media/organizing-videos-using-folders.html">Organisation des vidéos à l'aide de dossiers</a></li>
+                  
+                
+                  
+                    <li><a href="/media/overview-adding-captions-video.html">Vue d'ensemble : Ajout de légendes à une vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/media/replacing-video-source-file.html">Remplacement d'un fichier source vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/media/retranscoding-videos-using-media-module.html">Vidéos de retranscodage</a></li>
+                  
+                
+                  
+                    <li><a href="/media/setting-required-fields-videos.html">Définition des champs obligatoires</a></li>
+                  
+                
+                  
+                    <li><a href="/media/styling-captions.html">Légendes de style</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-poster-and-thumbnail-images.html">Téléchargement d'affiches et d'images miniatures</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-videos-using-upload-module.html">Téléchargement de vidéos</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-videos-remote-urls.html">Téléchargement de vidéos URL distantes</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-cue-points-media-module.html">Utilisation des points de repère</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-multi-lingual-metadata.html">Utilisation des métadonnées multilingues</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-remote-asset-videos.html">Utilisation des vidéos de ressources distantes</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">Gérer les canaux de diffusion dans le cloud <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">Vue d'ensemble : Lecture dans le cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">Créer un canal de diffusion cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">Utilisation des actions de canal</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">Monétisation de la diffusion dans le cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">Génération du code d'intégration de canal</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">Affichage de la sortie et des analyses de canal</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/players/index.html">Gérer les joueurs <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">Ajout de la recherche de vignettes</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">Configuration d'une superposition de lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-adobe-analytics-event-tracking.html">Configuration du suivi des événements Adobe Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-google-analytics-event-tracking.html">Configuration du suivi des événements Google Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-advertising-using-players-module.html">Configuration de la publicité du lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-content-restrictions.html">Configuration des restrictions relatives au contenu du lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-controls.html">Configuration des contrôles du lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-endscreen.html">Configuration de l'écran de fin du lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-localization.html">Configuration de la localisation du lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-playback-properties.html">Configuration des propriétés de lecture du lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-plugins.html">Configuration des plugins de lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-social-properties-player.html">Configuration des propriétés sociales</a></li>
+                  
+                
+                  
+                    <li><a href="/players/generating-player-embed-code.html">Generating Player Code d'intégration</a></li>
+                  
+                
+                  
+                    <li><a href="/players/getting-started-players-module.html">Démarrer avec le module Joueurs</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-information-properties.html">Définition des propriétés des informations sur le lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-properties.html">Définition des propriétés du lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-update-mode-and-version.html">Définition du mode de mise à jour du lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/players/styling-players.html">Styling Joueurs</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/publish/index.html">Publication de vidéos et de lecteurs <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/publish/adding-3play-media-interactive-transcript-video.html">Ajout d'une transcription interactive multimédia 3Play</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/adding-application-id-player-embed-code.html">Ajout d'un ID d'application au code d'intégration</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/adding-brightcove-player-facebook-fan-page.html">Ajout d'un lecteur à une page Facebook Fan</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/changing-video-player-without-changing-embed-code.html">Modification d'une vidéo dans un lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/choosing-correct-embed-code.html">Choix du bon code d'intégration</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/creating-and-publishing-high-quality-screencasts.html">Création et publication de Screencasts de haute qualité</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/deep-linking.html">Liaison profonde</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/driving-video-views-through-email.html">Conduite des vues vidéo par e-mail</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/dynamically-assigning-videos-player.html">Affectation dynamique de vidéos à un lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/embedding-brightcove-player-google-sites-page.html">Intégration d'un lecteur sur une page Google Sites</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-player-wordpress-page.html">Publication d'un lecteur dans une page Wordpress</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-players-facebook-instant-articles.html">Publication d'articles instantanés sur Facebook</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Joueurs d'édition dans Joomla</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-video-email.html">Publication d'une vidéo par e-mail</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-videos-and-playlists-media-module.html">Publication de vidéos et de listes de lecture</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-videos-page-experience.html">Publication de vidéos dans une expérience en page</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/step-step-using-players-module-create-and-publish-player.html">Étape par étape : Création et publication d'un lecteur</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/using-multiple-players-one-page.html">Utilisation de plusieurs joueurs sur une seule page</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/using-reference-ids.html">Utilisation des ID de référence</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/analytics/index.html">Vérification des analyses <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/analytics/analytics-module-ui-glossary.html">Glossaire d'interface utilisateur du module</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/analytics-report-reference.html">Référence du rapport Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/calculating-video-engagement-score.html">Calcul du score d'engagement vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/creating-custom-analytics-reports.html">Création de rapports Analytics personnalisés</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/engagement-report-reference.html">Référence du rapport d'engagement</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/exporting-data-analytics-module.html">Exportation de données</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/faq-analytics-module.html">FAQ : Module Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/getting-started-analytics-module.html">Démarrer avec le module Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/how-search-videos-analytics-module.html">Comment rechercher des vidéos</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/managing-scheduled-reports.html">Gestion des rapports planifiés</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/performance-report-reference.html">Référence du rapport sur les performances</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Révision des événements de joueur dans Google Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">Référence du rapport Tendances maintenant</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/index.html">Administration des comptes <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/admin/authenticating-studio-users-using-single-sign.html">Authentification des utilisateurs Studio à l'aide de l'authentification</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/configuring-language-settings.html">Configuration des paramètres de langue</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/configuring-server-side-ad-settings.html">Configuration des paramètres publicitaires côté serveur</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-custom-metadata-fields.html">Création de champs de métadonnées personnalisés</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-ingest-profiles-context-aware-encoding.html">Création de profils d'ingest pour l'encodage contextuel</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-ingest-profiles-dynamic-delivery.html">Création de profils d'ingest pour la livraison dynamique</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/ingest-profiles-best-practices.html">Meilleures pratiques d'ingest Profils</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-account-information.html">Gestion des informations de compte</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-account-settings.html">Gestion des paramètres du compte</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-api-authentication-credentials.html">Gestion des informations d'identification d'authentification API</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-ingest-profiles.html">Gestion des profils d'ingest</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-media-sharing-settings.html">Gestion des paramètres de partage de médias</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-profile-information.html">Gestion des informations de profil</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Profils d'ingestion standard (DD &amp; CAE)</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-users.html">Gestion des utilisateurs</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/using-directed-migration-tool-migrate-brightcove-smart-players.html">Utilisation de l'outil Migration dirigée</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/viewing-billing-information.html">Affichage des informations de facturation</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/training/index.html">Entraînement <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/training/online-training-courses.html">Tous les cours de formation en ligne</a></li>
+                  
+                
+                  
+                    <li><a href="/training/register-training.html">S' inscrire à la formation dirigée par un instructeur</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud.html">Formation : Présentation de Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">Formation : Présentation de Video Cloud Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-video-cloud-basics.html">Formation : Principes de base du cloud vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/training/video-cloud-studio-training-videos.html">Vidéos de formation Video Cloud Studio</a></li>
+                  
+                
+                  
+                    <li><a href="/training/brightcove-university.html">Cours de formation à l'Université de Brightcove</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/index.html">Notes de mise à jour <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/release-notes/video-cloud-studio-release-notes.html">Notes de version de Video Cloud Studio</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/index.html">Support <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/brightcove-answer.html">Réponses Brightcove</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Affichage de la page État du système Brightcove</a></li>
+                  
+                
+                  
+                    <li><a href="/support/contact-sales.html">Contacter les ventes</a></li>
+                  
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Ouverture d'un dossier de support</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="Menu de navigation"/></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Contenu de la page</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="ouvrir dans un nouvel onglet" style="margin-top:4em;width: 1.5em;"/></a>
+
+
+
+  
+    
+
+
+<h1>Utilisation de Cloud Playout pour diffuser des vidéos</h1>
+<article class="bcls-article">
+  <summary>Dans cette rubrique, vous apprendrez comment une collection de vidéos VOD et d'événements en direct peut être diffusée comme un canal linéaire en direct.</summary>
+  <section class="bcls-section">
+    <p>Le module Cloud Playout permet aux diffuseurs et aux éditeurs de médias d'utiliser une collection de vidéos VOD et de flux en direct, puis de les diffuser sous forme de canal linéaire. La chaîne peut être diffusée en continu vers Brightcove Live, Amazon S3 ou une URL RTMP spécifiée.</p>
+    <aside class="bcls-aside bcls-aside--information">Remarque : Cette fonctionnalité est actuellement en disponibilité limitée. Contactez votre agent Brightcove pour plus d'informations.</aside>
+    <p>Pour accéder au module Cloud Playout, cliquez sur <strong>Cloud Playout</strong> dans le menu de navigation. Une liste de tous les canaux Cloud Playout qui ont été créés sera affichée (le cas échéant).</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapport" src="/assets/images/general/playout-channel-list.png"/></figure>
+    <p>La page affiche les informations suivantes :</p>
+    <ul>
+      <li><strong>Nom du canal</strong> - Nom de la chaîne</li>
+      <li><strong>Heure de début</strong> - Heure de début de la chaîne</li>
+      <li><strong>Heure de fin</strong> - Heure de fin de la chaîne</li>
+      <li><strong>Boucle</strong> - Indique si le programme va boucler</li>
+      <li><strong>Destination</strong> - Destination cible du canal</li>
+      <li><strong>date créée</strong> - Date de création de la chaîne</li>
+      <li><strong>Dernière mise à jour</strong> - Date de la dernière mise à jour de la chaîne</li>
+      <li><strong>Statut</strong> - État du canal
+        <ul>
+          <li><strong>BROUILLON</strong> - Le canal a été créé mais pas activé</li>
+          <li><strong>CRÉER</strong> - Le canal est en cours d'activation</li>
+          <li><strong>PROGRAMMÉ</strong> - La chaîne est active et prête à diffuser</li>
+          <li><strong>DÉPART</strong> - Processus de démarrage de la chaîne pour commencer la diffusion</li>
+          <li><strong>FONCTIONNEMENT</strong> - La chaîne diffuse activement</li>
+          <li><strong>ARRÊT</strong> - La diffusion en continu de la chaîne s'arrête</li>
+          <li><strong>TOURNER AU RALENTI</strong> - Le canal a été exécuté avec succès et a été arrêté</li>
+          <li><strong>SUPPRIMER</strong> - La chaîne est en cours de suppression</li>
+          <li><strong>ERREUR</strong> - Une erreur s'est produite lors de la création ou de la diffusion de la chaîne</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="channel">Création d'un canal</h2>
+    <p>Pour créer une nouvelle chaîne Cloud Playout, procédez comme suit. </p>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Cliquez sur <strong>Cloud Playout</strong> dans l'en-tête de navigation.</li>
+      <li>
+        Cliquez sur <strong>Ajouter nouveau</strong>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/general/cloudplayout-new-channel-dialog.png" alt="Nouvelle chaîne"/>
+          <figcaption class="bcls-caption--image">Nouvelle chaîne</figcaption>
+        </figure>
+      </li>
+      <li>Entrez dans la chaîne <strong>Identification</strong> détails:
+        <ul>
+          <li><strong>Nom</strong> - Nom de la chaîne. Le nom doit comporter des caractères anglais et les caractères spéciaux suivants sont autorisés: &nbsp;&nbsp; _. : / = + -&nbsp;</li>
+          <li><strong>La description</strong> - Description de la chaîne</li>
+          <li><strong>URL de l'image</strong> - URL vers un fichier image pour la chaîne; censé être une image de chaîne pouvant être récupérée dans le cadre des métadonnées de la chaîne</li>
+        </ul>
+      </li>
+      <li>Entrez dans la chaîne <strong>Programme</strong> détails.
+        <ul>
+          <li><strong>Contenu de la lecture en boucle</strong> - Si <strong>Sur</strong> , le programme sera lu en boucle et le <strong>Date / heure de fin</strong> sera activé. Le programme peut toujours être modifié à tout moment et les changements seront reflétés dans le programme actuel et les boucles à suivre. Voir le <a href="#looping">Créer un programme en boucle</a> section ci-dessous.</li>
+          <li><strong>Insertion d'annonces</strong> - Si activé, permet aux publicités d'être affichées pendant la lecture de la chaîne. Si cette option est sélectionnée, les entrées en direct ne sont pas autorisées et vous ne pouvez <strong>Brightcove Live Event ou</strong> <strong>Bucket Amazon S3</strong>. Voir le <a href="#ads">Activation des publicités côté serveur</a> section ci-dessous.</li>
+          <li><strong>Date / heure de début</strong> - Heure à laquelle la chaîne commencera à jouer. L'heure de début de tous les actifs sera calculée en ajoutant leur durée à cette heure de début. Cette heure ne peut être mise à jour que lorsque le canal n'est pas en cours d'exécution.</li>
+          <li><strong>Date / heure de fin</strong> - Si aucune valeur n'est saisie et <strong>Contenu de la lecture en boucle</strong> n'est pas sélectionné, le flux s'arrêtera une fois la lecture terminée. Si <strong>Contenu de la lecture en boucle</strong> est sélectionné et il n'y a pas <strong>Date / heure de fin</strong> , la lecture sera diffusée jusqu'à ce que la chaîne soit arrêtée. Cette heure peut être mise à jour à tout moment.</li>
+        </ul>
+      </li>
+      <li>Si vous comptez utiliser des entrées Live, réglez <strong>Entrée en direct</strong> sur Activé et entrez une URL Slate, à moins que vous n'utilisiez le Brightcove MP4 par défaut pour votre ardoise. L'ardoise MP4 est lu chaque fois que l'entrée en direct est arrêtée parce que l'encodeur est arrêté ou qu'un problème technique bloque le flux en direct. <strong>Notez que <strong>l'URL Slate doit être une URL statique toujours disponible</strong> (les URL CDN de courte durée ne sont pas autorisées).</strong></li>
+      <li>Entrez dans la chaîne <strong>Destination</strong> détails. Cloud Playout prend en charge 2 sorties en même temps. Par exemple, vous pouvez générer HLS dans un compartiment S3 et un flux RTMP vers un canal Brightcove Live Channel ou un point d'ingestion tiers. Notez que <strong>Événement en direct Brightcove</strong> et <strong>RTMP</strong> n'est pas pris en charge.
+        <ul>
+          <li><strong>Optimiser l'affichage pour</strong> - Contrôle le débit et les dimensions de la sortie
+            <ul>
+              <li><strong>Mobile et Web</strong> - Si coché, sortie HD (débit binaire unique RTMP ou HLS)</li>
+              <li><strong>Smart TV</strong> - Si coché, sortie Full HD (débit binaire unique RTMP ou HLS)</li>
+            </ul>
+          </li>
+          <li><strong>Région de sortie</strong> - La région dans laquelle la chaîne sera créée. Brightcove recommande de sélectionner une région géographiquement la plus proche de l'endroit où la majorité de votre audience est attendue.</li>
+          <li><strong>Sortie vers</strong> - Sélectionnez une méthode de sortie pour le canal
+            <ul>
+              <li><strong>Événement en direct Brightcove</strong> - Créez ou utilisez une chaîne Brightcove Live précédemment créée. Lors de la création d'un nouveau canal, la région du canal sera optimisée en fonction du <strong>Région de sortie</strong> qui a été sélectionné.</li>
+              <li><strong>RTMP</strong> - Sélectionnez pour sortir le flux vers un point d'ingestion RTMP ou RTP. RTP n'est pas disponible pour les points d'ingestion tiers, uniquement lorsque <strong>Insertion d'annonces</strong> et <strong>Événement en direct Brightcove</strong> est autorisé. Lorsqu'il est sélectionné, un <strong>URL RTMP</strong> apparaîtra - entrez l'URL d'entrée RTMP de votre service de diffusion en direct.</li>
+              <li><strong>Bucket Amazon S3 </strong> - Sélectionnez pour pousser une sortie HLS vers un compartiment Amazon S3. Vous devrez entrer le nom du compartiment, la région, la clé d'accès et la clé secrète. Le seau doit être public et accessible en écriture.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Cliquez sur <strong>Créer une chaîne</strong>. Le nouveau canal sera créé avec un statut de <strong>BROUILLON</strong>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="add_videos">Ajout de vidéos et d'événements en direct à une chaîne</h2>
+    <p>Après avoir créé votre chaîne, l'écran affiche les paramètres de la chaîne :</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/general/cloudplayout-channel-details.png" alt="Paramètres de canal"/>
+      <figcaption class="bcls-caption--image">Paramètres de canal</figcaption>
+    </figure>
+    <p>Vous pouvez modifier les détails, mais l'étape suivante principale consiste à ajouter des vidéos et/ou des événements en direct (si vous avez activé les entrées en direct) à la chaîne.</p>
+    <h3>Ajouter des vidéos (VOD)</h3>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Cliquez sur <strong>+ Ajouter des vidéos</strong>. (Si vous êtes sur la page de la liste des chaînes, cliquez sur le nom de la chaîne pour ouvrir la page des paramètres de la chaîne, puis cliquez sur <strong>+ Ajouter des vidéos</strong>).
+      </li>
+      <li>Cochez la case située en regard des vidéos que vous souhaitez ajouter à la chaîne.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapport" src="/assets/images/general/playout-select-videos.png"/></figure>
+      </li>
+      <li>Cliquez sur <strong>Ajouter des vidéos</strong>.</li>
+      <li>Cliquez sur <strong>Save</strong>.</li>
+      <li>
+        La liste des programmes de la chaîne apparaîtra :
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/general/cloudplayout-vod-program-list.png" alt="Liste des programmes"/>
+          <figcaption class="bcls-caption--image">Liste des programmes</figcaption>
+        </figure>
+        <p>Notez que les heures de début et de fin sont calculées automatiquement à partir des durées vidéo. Vous pouvez glisser-déposer des vidéos dans la liste pour les réorganiser, et les heures de début et de fin seront automatiquement ajustées.</p>
+      </li>
+    </ol>
+    <h3>Ajouter des événements en direct</h3>
+    <ol class="bcls-tasklist">
+        <li>Clique le <strong>+ Ajouter un événement en direct</strong> bouton.</li>
+        <li>
+          Dans la boîte de dialogue Ajouter un événement en direct, entrez le <strong>Nom</strong> , <strong>Durée</strong> , et <strong>La description</strong> pour l'événement en direct:
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/general/cloudplayout-add-live-event.png" alt="Ajouter un événement en direct"/>
+            <figcaption class="bcls-caption--image">Ajouter un événement en direct</figcaption>
+          </figure>
+          <p>Notez que la durée minimale d'un événement en direct est de 5 minutes, et la durée peut être incrémentée ou décrémentée à intervalles de 5 minutes seulement - Si nécessaire, la durée peut être modifiée en ligne dans la zone de texte pour ajuster la granularité du temps. La durée d'un événement en direct peut être modifiée à tout moment, même en cours de lecture.</p>
+        </li>
+        <li>
+          Après avoir ajouté des événements en direct, ils apparaîtront dans la liste des programmes avec des éléments VOD :
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/general/cloudplayout-live-event-program-list.png" alt="Liste des programmes"/>
+            <figcaption class="bcls-caption--image">Liste des programmes</figcaption>
+          </figure>
+        </li>
+        <li>Vous pouvez faire glisser des événements en direct pour réorganiser la liste comme vous le pouvez les vidéos. Vous pouvez également utiliser le <strong>Edition rapide</strong> bouton pour modifier la durée d'un événement en direct.</li>
+    </ol>
+    <p>Une fois que les vidéos et les événements en direct ont été ajoutés à une chaîne, cliquez sur <strong>Activer</strong> pour activer le canal. Un canal doit être activé avant que le streaming puisse commencer. Voir le <a href="#actions">Utilisation des actions de canal</a> section ci-dessous pour plus d'informations.</p>
+    <aside class="bcls-aside bcls-aside--information">Remarque : Pour changer l'ordre des vidéos dans un programme, cliquez sur une vidéo et faites-la glisser vers une nouvelle position.</aside>
+    <p>Lorsque des vidéos sont ajoutées à une chaîne, une liste de lecture générée par le système est créée et visible dans le module Media.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapport" src="/assets/images/general/playout-playlist-created.png"/></figure>
+    <p>Nous vous recommandons vivement d'apporter des modifications à la chaîne dans le module Cloud Playout, et <strong>ne modifiez en aucun cas la playlist générée</strong>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="getting_the_rtmp_ingest_point">Obtenir le point d'ingestion RTMP</h2>
+    <p>Pour votre encodeur en direct, vous aurez besoin du point d'ingest RTMP pour votre canal. Vous pouvez le trouver dans le <strong> Paramètres de la chaîne</strong>:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/general/cloudplayout-rtmp-ingest-point.png" alt="Point d'ingestion"/>
+      <figcaption class="bcls-caption--image">Point d'ingestion</figcaption>
+    </figure>
+    <p>Selon l'encodeur que vous utilisez, vous devrez peut-être entrer à la fois le point d'ingest RTMP et le nom du flux. Le nom de flux de la chaîne est le <strong>Identifiant de la chaine</strong> , qui est également la dernière partie de l'adresse du point d'ingestion.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Notez que si vous utilisez l'encodeur logiciel OBS, vous devrez spécifier un <strong>Personnalisé...</strong> service, et devra saisir un <strong>Serveur</strong> et <strong>Clé de flux</strong>. Le <strong>Serveur</strong> sera la première partie de la <strong>Point d'ingestion</strong> , et le <strong>Clé Steam</strong> sera la partie restante, comme indiqué dans l'exemple ci-dessous:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/general/cloud-playout-key-for-obs.png" alt="Point d'ingestion Cloud Playout"/>
+        <figcaption class="bcls-caption--image">Point d'ingestion Cloud Playout</figcaption>
+      </figure>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/general/cloudplayout-obs-setup.png" alt="Configuration OBS"/>
+        <figcaption class="bcls-caption--image">Configuration OBS</figcaption>
+      </figure>
+    </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit_delete">Modification et suppression d'un canal</h2>
+    <p>Pour modifier une chaîne Cloud Playout, cliquez sur le nom de la chaîne, puis sur <strong>Éditer</strong>. Apportez les modifications appropriées, puis cliquez sur <strong>Mettre à jour la chaîne</strong>. Notez que les propriétés Destination ne peuvent pas être modifiées une fois qu'un canal a été créé.</p>
+    <p>Pour supprimer une chaîne Cloud Playout, cochez la case en regard du nom de la chaîne, puis cliquez sur <strong>Effacer</strong>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="looping">Création d'un programme de bouclage</h2>
+    <p>Pour créer un programme qui boucle, lors de la création du canal, définissez le <strong>Contenu de la lecture en boucle</strong> réglage sur <strong>Sur</strong>. Au fur et à mesure que les vidéos sont ajoutées au programme, la liste des programmes sera mise à jour pour afficher la série de vidéos avec les heures de début et de fin associées pour remplir la totalité de l'heure programmée de la chaîne. Lorsque vous modifiez la durée d'un événement en direct, la durée des événements qui ont déjà passé reste inchangée, mais toute lecture ultérieure de l'événement utilisera la nouvelle durée.</p>
+    <p>Dans l'exemple ci-dessous, le canal inclut la VOD et les événements en direct dans une boucle.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapport" src="/assets/images/general/cloudplayout-looping-channel.png"/></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="actions">Utilisation des actions de canal</h2>
+    <p>En fonction de l'état du canal, différents boutons d'action de canal seront disponibles sur la page des paramètres du canal. Accédez aux boutons d'action du canal en cliquant sur le nom du canal pour afficher les paramètres du canal. Les boutons d'action de canal suivants sont disponibles :</p>
+    <ul>
+      <li><strong>Activer</strong> - L'activation d'un canal le rend disponible pour le streaming. Les chaînes doivent avoir des vidéos avant de pouvoir être activées.</li>
+      <li><strong>joue maintenant</strong> - Cliquez sur <strong>joue maintenant</strong> pour commencer à diffuser la chaîne. Cette option n'est disponible que pour les chaînes qui ont une heure de début à venir.</li>
+      <li><strong>Arrêter maintenant</strong> - Cliquez sur <strong>Arrêter maintenant</strong> pour arrêter une chaîne de streaming. Cela arrêtera le canal et mettra fin au flux en direct.</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapport" src="/assets/images/general/playout-channel-actions.png"/></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="ads">Activation des annonces côté serveur</h2>
+    <p>Il est possible de configurer un canal de sorte que les annonces côté serveur soient affichées à l'aide de la technologie d'insertion d'annonces côté serveur de Brightcove. </p>
+    <aside class="bcls-aside bcls-aside--information">Remarques : 
+      <ul>
+        <li>Lorsque vous utilisez l'insertion d'annonces, la chaîne ne peut être sortie que dans un événement Brightcove Live Event.</li>
+        <li>Si vous activez l'insertion d'annonces, les entrées dynamiques ne peuvent pas être utilisées dans le canal.</li>
+      </ul>
+      </aside>
+    <h3>Configuration des balises publicitaires et des ardoises de remplissage</h3>
+    <p>Assurez-vous que les balises publicitaires et les ardoises de remplissage sont configurées dans le cadre de l'administration de votre compte. Pour plus d'informations sur la configuration des tags d'emplacement publicitaire, consultez <a href="/admin/configuring-server-side-ad-settings.html">Configuration des paramètres d'annonce côté serveur</a>. Les ardoises de remplissage sont du contenu qui peut être diffusé lorsqu'il y a des lacunes dans un saut de diffusion en direct. Pour plus d'informations sur la création d'ardoises de remplissage, voir <a href="https://live.support.brightcove.com/admin/managing-live-settings.html">Gérer les paramètres en direct</a>.</p>
+    <p>
+      <aside class="bcls-aside bcls-aside--information">Remarque : Cloud Playout utilisera la liste d'annonces par défaut configurée dans le cadre de la <a href="https://live.support.brightcove.com/admin/managing-live-settings.html">Paramètres en direct</a>.</aside>
+    </p>
+    <h3>Création de vidéos de saut publicitaire d'espace réservé</h3>
+    <p>Vous devez indiquer quelle (s) vidéo (s) doit (s) être utilisée (s) comme vidéos « espace réservé ». Les vidéos « Espace réservé » seront insérées dans la liste des programmes pour indiquer qu'une annonce doit être diffusée et la durée de l'annonce. Cela doit être fait car lorsque vous utilisez l'insertion d'annonces côté serveur avec Brightcove Live, la vidéo « espace réservé » sera remplacée par du contenu publicitaire. Si vous n'insérez pas de vidéo « réservé » d'annonce, certaines parties de la vidéo réelle seront remplacées par du contenu publicitaire. Si la durée de l'annonce est plus courte que celle renvoyée, SSAI affichera l'ardoise publicitaire. Si la durée de l'annonce est plus longue que les annonces retournées, elles seront affichées suivies de l'ardoise. </p>
+    <p>Il se peut que vous deviez créer/télécharger des fichiers source vidéo dont la longueur vidéo est égale à la durée de pause que vous souhaitez avoir (c.-à-d. 2 minutes, 4 minutes, etc.). Le contenu de ces vidéos n'a pas d'importance car elles ne seront pas réellement jouées dans le cadre d'un programme. </p>
+    <p>Pour marquer une vidéo comme vidéo "espace réservé", utilisez le module Média pour modifier les propriétés vidéo de ces vidéos et les marquer avec <code translate="No">cp-ad-holder</code>.
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapport" src="/assets/images/general/playout-ad-tag-video.png"/></figure>
+    </p>
+    <h3>Activation des annonces côté serveur pour une chaîne</h3>
+    <p>Lors de la création d'un canal, définissez le <strong>Insertion d'annonces</strong> option pour <strong>Sur</strong>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapport" src="/assets/images/general/playout-ad-insertion-option.png"/></figure>
+    <aside class="bcls-aside bcls-aside--information">Remarque : Pour les canaux existants, le paramètre Insertion d'annonces ne peut pas être modifié.</aside>
+    <h3>Insertion d'espaces réservés d'annonces dans un programme</h3>
+    <p>Vous devez insérer des espaces réservés publicitaires dans la liste des programmes où les annonces doivent être affichées. Procédez comme suit pour insérer des espaces réservés aux annonces.</p>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Cliquez sur le nom d'un canal pour le modifier.</li>
+      <li>Dans la liste des programmes, cochez la case à côté de la vidéo <strong>après</strong> dont vous souhaitez diffuser une annonce.</li>
+      <li>Cliquez sur <strong>Insérer des annonces</strong> et sélectionnez un <strong>durée de l'annonce</strong>. La liste des durées d'annonces est générée en fonction de la durée de toutes les vidéos "d'espace réservé" de coupure publicitaire (balisées <code translate="No">cp-ad-holder</code>).
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapport" src="/assets/images/general/playout-insert-ads-button.png"/></figure>
+      </li>
+      <li>Cliquez sur <strong>D'accord</strong>. La vidéo « espace réservé » avec la longueur sélectionnée sera insérée dans le programme après la vidéo sélectionnée.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapport" src="/assets/images/general/playout-ad-break-inserted.png"/></figure>
+        <aside class="bcls-aside bcls-aside--information">Remarque : La vidéo qui est insérée comme "espace réservé" <strong>Ne fera pas</strong> être joué dans le cadre du programme. Cette vidéo est uniquement utilisée pour indiquer où une demande d'annonce sera faite et la durée de l'annonce.</aside>
+      </li>
+      <li>Cliquez sur <strong>sauver</strong> pour enregistrer les modifications apportées au programme.</li>
+    </ol>
+    <h3>Sélection de la configuration de l'annonce</h3>
+    <p>Une fois que le programme commence à jouer, cliquez sur <strong>Afficher dans Brightcove Live</strong> pour afficher la chaîne dans le module Live. La liste déroulante située sous le lecteur peut être utilisée pour sélectionner la configuration de l'annonce qui sera utilisée.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapport" src="/assets/images/general/playout-live-select-ad-config.png"/></figure>
+    <figure class="bcls-figure"></figure>
+    <p>Pour obtenir des informations complètes sur l'insertion d'annonces côté serveur, consultez le <a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html">Présentation de Video Cloud SSAI</a> sujet.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="publish">Génération du code intégré pour un canal Cloud Playout</h2>
+    <p>Pour générer le code d'intégration d'un canal Cloud Playout, vous utiliserez le module Live. Pour plus de détails sur l'utilisation du module Live, consultez <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html">Création et gestion d'événements en direct à l'aide du module en direct</a>.</p>
+    <p>Deux types de code intégré sont disponibles :</p>
+    <ul>
+      <li><strong>Standard</strong> - code d'intégration iframe. Recommandé dans la plupart des cas. Ce type place le joueur à l'intérieur d'une  balise.</li>
+      <li><strong>Avancé</strong> - Code d'intégration dans la page. Permet au lecteur d'exister directement dans la page HTML, pas dans un iframe. Cela permet aux développeurs d'accéder facilement au lecteur et aux propriétés et événements associés.</li>
+    </ul>
+    <p>Vous avez également la possibilité d'obtenir l'URL vers le lecteur publié. Ceci est utile pour afficher l'événement dans un navigateur.</p>
+    <p>Pour générer le code d'intégration d'un événement en direct, procédez comme suit :</p>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Ouvrez le module Live.</li>
+      <li>Localisez l'événement en direct sur lequel la chaîne sera diffusée en continu. En règle générale, l'événement aura lieu dans le <strong>Etre prêt</strong> onglet et avoir un nom de <strong>Canal</strong> sauf si vous avez sélectionné un événement spécifique vers lequel diffuser lorsque la chaîne a été créée.</li>
+      <li>Cliquez sur le nom de l'événement pour ouvrir le <strong>Salle de contrôle</strong> page.</li>
+      <li>Cliquez sur <strong>Publier et incorporer&gt; Configuration du lecteur</strong> dans la navigation de gauche.
+        <aside class="bcls-aside bcls-aside--information">Remarque : Si le canal est configuré pour activer les annonces côté serveur (SSAI), Brightcove Player version 6.18.3 et ultérieure doit être utilisé. Seuls les joueurs de la version 6.18.3 et des versions supérieures apparaîtront dans la liste déroulante.</aside>
+      </li>
+      <li>Cliquez sur l' <strong>URL du lecteur</strong> pour prévisualiser l'événement dans un navigateur ou copier le code d'intégration approprié à utiliser.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/playout-embed-code.png"/></figure>
+      </li>
+    </ol>
+    <p>Si le programme a été créé avec <strong>Insertion d'annonces</strong> option définie sur <strong>Sur</strong> , les options de publication comprendront un <strong>Sélectionnez la configuration de l'annonce</strong> liste déroulante où la configuration d'annonce à utiliser peut être sélectionnée.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapport" src="/assets/images/general/playout-embed-code-ads.png"/></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="analytics">Affichage de la sortie des canaux et des analyses</h2>
+    <p>Pendant que le canal est dans un <strong>FONCTIONNEMENT</strong> état, il est possible d'afficher la sortie et les analyses du canal. Cliquez sur la chaîne sur le <strong>Chaînes</strong> pour ouvrir les détails de la chaîne.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/general/cloudplayout-program-analytics.png"/></figure>
+    <aside class="bcls-aside bcls-aside--information">Remarque : L'image d'aperçu est mise à jour toutes les trois secondes.</aside>
+    <p>Cliquez sur <strong>Afficher dans Brightcove Live</strong> pour ouvrir la page Control Room du module Live avec le programme en cours d'exécution. La vidéo en cours de lecture dans le programme sera mise en évidence avec un <strong>Joue maintenant</strong> bannière. Notez également le <strong>Statut</strong> notification en haut à droite, et le <img src="/assets/images/general/cloudplayout-video-icon.png" alt="Icône Live"/> qui sera vert s'il y a un flux en direct disponible. Sinon, il sera rouge si un événement en direct est en cours de lecture, ou gris si le contenu VOD est en cours de lecture.</p>
+    <p>Les valeurs analytiques suivantes seront affichées :</p>
+    <ul>
+      <li><strong>Réseau dans</strong> - Moyenne d'octets par seconde dans la dernière minute</li>
+      <li><strong>Sortie réseau</strong> - Moyenne d'octets par seconde dans la dernière minute</li>
+      <li><strong>Cadres abandonnés</strong> - Pourcentage d'images perdues au cours de la dernière minute</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="epg">Travailler avec un guide de programme électronique</h2>
+    <p>Une API est disponible pour générer un guide de programme électronique pour le canal Cloud Playout. Pour plus d'informations, consultez le <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">Aperçu: API EPG</a> sujet.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="limitations">Contraintes</h2>
+    <p>Les hypothèses et limitations suivantes s'appliquent.</p>
+    <ul>
+      <li> Vos vidéos doivent être ingérées à l'aide d'un profil Dynamic Delivery et doivent avoir un format associé MP4</li>
+      <li>Le débit d'entrée maximum et la résolution pris en charge pour Cloud Playout sont de 20Mbps/1080p. Cela s'applique à la fois au contenu VOD et aux entrées en direct.</li>
+      <li>Brightcove recommande d'utiliser des vidéos d'une durée d'au moins 2 minutes pour assurer une transition correcte entre les vidéos et la précision du guide de programmation électronique</li>
+      <li>La durée minimale des événements en direct est de 5 minutes.</li>
+      <li>Chaque événement en direct dans Cloud Playout partage une relation 1:1 avec une ressource distante Video Cloud. Cette ressource distante ne peut pas être réutilisée dans d'autres canaux. Si l'événement en direct est supprimé du canal, l'actif distant associé sera automatiquement supprimé. Lorsqu'un canal est supprimé, toutes les ressources distantes associées sont également supprimées automatiquement.</li>
+      <li>Lorsqu'un événement en direct est en cours de lecture, mais qu'aucun flux actif n'est disponible, le contenu de l'ardoise est lu en boucle jusqu'à ce que le flux en direct reprenne ou que l'événement se termine. Il y aura un délai d'environ 30 secondes avant que l'ardoise MP4 commence à jouer.</li>
+      <!--<li><strong>Input Looper : if the asset URL is duplicated, then input looper rely on order for switching; if the order is changes during the course of the switching , then subsequent N+1 switch it attempt to create would rely on the order. </strong></li>-->
+      <li>Si le compte Video Cloud est configuré pour la géo-restriction, le canal <strong>Région de sortie</strong> doit être créé dans une région compatible avec la politique de restriction géographique de Video Cloud.</li>
+      <li>Pour une expérience optimale, Brightcove recommande d'utiliser le navigateur Google Chrome.</li>
+    </ul>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Contenu de la page</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Dernière mise à jour de la page le 10 janvier 2021
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Assistance Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">État du système</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contacter le support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Formation</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">Cours en ligne</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">S' inscrire à un cours</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">Université de Brightcove</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">BrightCove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contactez-nous</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove, Inc. Tous droits réservés.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Confidentialité</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Termes et conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <style>
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>

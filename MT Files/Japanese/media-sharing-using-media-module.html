@@ -1,0 +1,1250 @@
+﻿<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>メディアモジュールを使用したメディア共有</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Video_Cloud_Logo.svg" alt="製品ロゴ" style="max-height: 100px;max-width: 232px;"/></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">言語の選択</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+    <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+      <option value="">ブライトコーブのその他のドキュメント</option>
+      
+        
+          <option value="https://support.brightcove.com">ドキュメントホーム</option>
+        
+      
+        
+          <option value="https://audience.support.brightcove.com">Brightcove Audience</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">ブライトコーブビーコン</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">ブライトコーブキャンペーン</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">Brightcove Engage</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">ブライトコーブ・ライブ</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">ブライトコーブギャラリー</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+        
+      
+        
+          <option value="https://social.support.brightcove.com">ブライトコーブソーシャル</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">ブライトコーブのプレーヤー開発</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">Video CloudプラットフォームAPI</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">ビデオクラウドデバイス SDK</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">統合および CMS コネクタ</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">ビデオクラウドの一般情報</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+        
+      
+    </select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="サポート"/> サポートへのお問い合わせ</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="システムステータス"/> システムステータス</a></span> <br/>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">ホーム</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/media/">ビデオを管理する</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">メディアモジュールを使用したメディア共有</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav" id="side_nav">
+          
+            
+            <h5><a href="/index.html">ホーム</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/index.html">はじめに<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/get-started/getting-started-video-cloud-studio.html">ビデオクラウドスタジオの入門</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/getting-started-your-video-cloud-trial.html">Video Cloud トライアルの使用を開始する</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/navigating-brightcove-support-site.html">ブライトコーブサポートサイトのナビゲート</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/quick-start-video-cloud.html">ビデオクラウドへのクイックスタート</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/step-step-video-cloud-studio-publishing-workflow.html">ステップバイステップ:ビデオクラウドパブリッシングワークフロー</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">トレーニング:ビデオクラウド分析の概要</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud.html">トレーニング:ビデオクラウドの概要</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-video-cloud-basics.html">トレーニング:ビデオクラウドの基本</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/video-cloud-glossary.html">ビデオクラウド用語集</a></li>
+                  
+                
+                  
+                    <li><a href="/training/video-cloud-studio-training-videos.html">ビデオクラウドスタジオトレーニングビデオ</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/basics/index.html">基本を学びましょう<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-activating-and-deactivating-video.html">ビデオのアクティブ化と非アクティブ化</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-adding-user-video-cloud-account.html">Video Cloud アカウントへのユーザーの追加</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html">ビデオポスターとサムネイル画像のキャプチャ</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-manual-playlist.html">手動プレイリストの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-player.html">プレーヤーを作成する</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-playlist-player.html">プレイリストプレーヤーの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-smart-playlist.html">スマートプレイリストの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-determining-how-much-video-being-watched.html">動画が視聴されている量の判別</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-determining-which-videos-have-most-views.html">視聴回数の多い動画を特定する</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-editing-basic-video-properties.html">基本的なビデオプロパティの編集</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-editing-video-properties-multiple-videos.html">複数のビデオのビデオプロパティの編集</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-organizing-videos-using-folders.html">フォルダを使用したビデオの整理</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-publishing-playlist-web.html">プレイリストを Web に公開する</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-publishing-single-video-web.html">1 つのビデオを Web に公開する</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-styling-player.html">プレーヤーのスタイリング</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html">動画ポスター＆サムネイル画像のアップロード</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-uploading-videos.html">動画をアップロード中</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-viewing-brightcove-system-status-page.html">ブライトコーブのシステムステータスページの表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/general/index.html">一般情報<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/general/adding-facebook-button-brightcove-player.html">Facebook の「いいね！」ボタンをプレーヤーに追加する</a></li>
+                  
+                
+                  
+                    <li><a href="/general/best-practices-video-creating-transcoding-and-uploading-workflow.html">ベストプラクティス：トランスコーディングとアップロード</a></li>
+                  
+                
+                  
+                    <li><a href="/general/content-delivery-options.html">コンテンツ配信オプション</a></li>
+                  
+                
+                  
+                    <li><a href="/general/creating-audio-only-renditions-low-bandwidth-delivery.html">オーディオのみのレンディションの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/general/domains-and-ports-must-be-accessible-video-cloud.html">アクセス可能でなければならないドメインとポート</a></li>
+                  
+                
+                  
+                    <li><a href="/general/drm-output-protection-settings.html">DRM 出力保護の設定</a></li>
+                  
+                
+                  
+                    <li><a href="/general/enabling-longer-videos-youtube.html">YouTube で長い動画を有効にする</a></li>
+                  
+                
+                  
+                    <li><a href="/general/making-your-video-content-indexable.html">動画コンテンツをインデックス可能にする</a></li>
+                  
+                
+                  
+                    <li><a href="/general/optimal-video-dimensions.html">最適なビデオ寸法</a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-context-aware-encoding.html">コンテキスト認識エンコーディングの概要</a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-digital-rights-management-drm-video-cloud.html">概要:デジタル著作権管理 (DRM) </a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-dynamic-delivery.html">動的配信の概要</a></li>
+                  
+                
+                  
+                    <li><a href="/general/protecting-videos-hls-encryption.html">HLS 暗号化によるビデオの保護</a></li>
+                  
+                
+                  
+                    <li><a href="/general/resetting-your-studio-password.html">スタジオパスワードのリセット</a></li>
+                  
+                
+                  
+                    <li><a href="/general/sharing-videos-twitter-player-cards.html">Twitterプレイヤーカードに動画を共有する</a></li>
+                  
+                
+                  
+                    <li><a href="/general/studio-system-requirements.html">スタジオのシステム要件</a></li>
+                  
+                
+                  
+                    <li><a href="/general/supported-video-and-audio-formats-codecs-and-containers.html">サポートされているビデオおよびオーディオ形式</a></li>
+                  
+                
+                  
+                    <li><a href="/general/tls-media-player-and-api-urls.html">メディア、プレーヤー、API の URL の TLS </a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-cloud-architecture-overview.html">ビデオクラウドアーキテクチャの概要</a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-cloud-studio-cookies.html">ビデオクラウドスタジオクッキー</a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-source-file-specifications-and-recommendations.html">ビデオソースファイルの仕様と推奨事項</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-360deg-videos.html">360° ビデオの操作</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-audio-content.html">音声のみのコンテンツの操作</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-multiple-video-cloud-accounts.html">複数のアカウントの操作</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/media/index.html">ビデオの管理<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/media/adding-audio-tracks-videos-using-media-module.html">ビデオへのオーディオトラックの追加</a></li>
+                  
+                
+                  
+                    <li><a href="/media/adding-captions-videos-using-media-module.html">動画へのキャプションの追加</a></li>
+                  
+                
+                  
+                    <li><a href="/media/adding-chapters-video.html">ビデオへのチャプターの追加</a></li>
+                  
+                
+                  
+                    <li><a href="/media/capturing-poster-and-thumbnail-images.html">ポスターとサムネイル画像のキャプチャ</a></li>
+                  
+                
+                  
+                    <li><a href="/media/configuring-video-availability.html">ビデオ可用性の設定</a></li>
+                  
+                
+                  
+                    <li><a href="/media/creating-and-managing-playlists.html">プレイリストの作成と管理</a></li>
+                  
+                
+                  
+                    <li><a href="/media/downloading-videos-video-cloud.html">Video クラウドから動画をダウンロードする</a></li>
+                  
+                
+                  
+                    <li><a href="/media/editing-video-properties-using-media-module.html">ビデオプロパティの編集</a></li>
+                  
+                
+                  
+                    <li><a href="/media/editing-video-properties-using-quick-edit.html">クイック編集を使用してプロパティを編集する</a></li>
+                  
+                
+                  
+                    <li><a href="/media/exporting-video-data.html">ビデオデータの書き出し</a></li>
+                  
+                
+                  
+                    <li><a href="/media/getting-started-media-module.html">メディアモジュールの使用開始</a></li>
+                  
+                
+                  
+                    <li><a href="/media/how-search-videos-and-playlists-media-module.html">動画と再生リストを検索する方法</a></li>
+                  
+                
+                  
+                    <li><a href="/media/increasing-quality-poster-and-thumbnail-images.html">ポスター画像の品質を上げる</a></li>
+                  
+                
+                  
+                    <li><a href="/media/introduction-playlists.html">プレイリストの概要</a></li>
+                  
+                
+                  
+                    <li><a href="/media/media-sharing-using-media-module.html">メディア共有</a></li>
+                  
+                
+                  
+                    <li><a href="/media/organizing-videos-using-folders.html">フォルダを使用したビデオの整理</a></li>
+                  
+                
+                  
+                    <li><a href="/media/overview-adding-captions-video.html">概要:動画にキャプションを追加する</a></li>
+                  
+                
+                  
+                    <li><a href="/media/replacing-video-source-file.html">ビデオソースファイルの置き換え</a></li>
+                  
+                
+                  
+                    <li><a href="/media/retranscoding-videos-using-media-module.html">動画の再トランスコーディング</a></li>
+                  
+                
+                  
+                    <li><a href="/media/setting-required-fields-videos.html">必須フィールドの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/media/styling-captions.html">キャプションのスタイル設定</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-poster-and-thumbnail-images.html">ポスターとサムネイル画像のアップロード</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-videos-using-upload-module.html">動画をアップロード中</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-videos-remote-urls.html">動画のリモートURLをアップロードする</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-cue-points-media-module.html">キューポイントの操作</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-multi-lingual-metadata.html">多言語メタデータの操作</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-remote-asset-videos.html">リモートアセットビデオの操作</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">クラウドプレイアウトチャネルの管理<strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/players/index.html">プレーヤーの管理<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-adobe-analytics-event-tracking.html">Adobe Analytics イベントトラッキングの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-google-analytics-event-tracking.html">Google アナリティクスのイベントトラッキングの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-advertising-using-players-module.html">プレーヤー広告の設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-content-restrictions.html">プレーヤーコンテンツ制限の設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-controls.html">プレーヤーコントロールの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-endscreen.html">プレーヤーエンドスクリーンの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-localization.html">プレーヤーローカリゼーションの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-playback-properties.html">プレーヤーの再生プロパティの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-plugins.html">プレーヤープラグインの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-social-properties-player.html">ソーシャルプロパティの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/generating-player-embed-code.html">プレーヤー埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/players/getting-started-players-module.html">プレイヤーズモジュールの開始にあたって</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-information-properties.html">プレイヤー情報プロパティの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-properties.html">プレーヤーのプロパティの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-update-mode-and-version.html">プレーヤー更新モードの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/styling-players.html">プレーヤーのスタイリング</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/publish/index.html">動画とプレーヤーの公開<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/publish/adding-3play-media-interactive-transcript-video.html">3Play メディアインタラクティブトランスクリプトの追加</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/adding-application-id-player-embed-code.html">埋め込みコードへのアプリケーション ID の追加</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/adding-brightcove-player-facebook-fan-page.html">Facebookのファンページにプレーヤーを追加する</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/changing-video-player-without-changing-embed-code.html">プレーヤーのビデオを変更する</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/choosing-correct-embed-code.html">正しい埋め込みコードの選択</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/creating-and-publishing-high-quality-screencasts.html">高品質のスクリーンキャストの作成と公開</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/deep-linking.html">ディープリンク</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/driving-video-views-through-email.html">電子メールによるビデオビューの促進</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/dynamically-assigning-videos-player.html">プレーヤーへのビデオの動的な割り当て</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/embedding-brightcove-player-google-sites-page.html">Google サイトページへのプレーヤーの埋め込み</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-player-wordpress-page.html">ワードプレスのページでプレーヤーを公開する</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-players-facebook-instant-articles.html">Facebook インスタント記事でのプレーヤーの公開</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Joomlaでプレーヤーを公開する</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-video-email.html">電子メールへのビデオの公開</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-videos-and-playlists-media-module.html">動画と再生リストの公開</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-videos-page-experience.html">ページ内エクスペリエンスへのビデオの公開</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/step-step-using-players-module-create-and-publish-player.html">ステップバイステップ:プレーヤーの作成と公開</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/using-multiple-players-one-page.html">1ページで複数のプレイヤーを使用する</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/using-reference-ids.html">参照 ID の使用</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/analytics/index.html">アナリティクスの確認<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/analytics/analytics-module-ui-glossary.html">分析モジュール UI 用語集</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/analytics-report-reference.html">アナリティクスレポートリファレンス</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/calculating-video-engagement-score.html">動画エンゲージメントスコアの計算</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/creating-custom-analytics-reports.html">カスタム分析レポートの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/engagement-report-reference.html">エンゲージメントレポートのリファレンス</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/exporting-data-analytics-module.html">データのエクスポート</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/faq-analytics-module.html">よくある質問:分析モジュール</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/getting-started-analytics-module.html">Analyticsモジュールの基礎</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/how-search-videos-analytics-module.html">動画を検索する方法</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/managing-scheduled-reports.html">スケジュール・レポートの管理</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/performance-report-reference.html">パフォーマンスレポートリファレンス</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google アナリティクスでのプレーヤーイベントの確認</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">今トレンド分析レポートリファレンス</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/index.html">アカウントの管理<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/admin/authenticating-studio-users-using-single-sign.html">SSOを使用したStudioユーザーの認証</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/configuring-language-settings.html">言語設定の構成</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/configuring-server-side-ad-settings.html">サーバーサイド広告設定の構成</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-custom-metadata-fields.html">カスタムメタデータフィールドの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-ingest-profiles-context-aware-encoding.html">コンテキスト認識エンコーディングの取り込みプロファイルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-ingest-profiles-dynamic-delivery.html">動的配信用の取り込みプロファイルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/ingest-profiles-best-practices.html">プロファイルの取り込みに関するベストプラクティス</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-account-information.html">アカウント情報の管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-account-settings.html">アカウント設定の管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-api-authentication-credentials.html">API 認証資格情報の管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-ingest-profiles.html">取り込みプロファイルの管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-media-sharing-settings.html">メディア共有設定の管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-profile-information.html">プロファイル情報の管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準取り込みプロファイル（DD および CAE）</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-users.html">ユーザーの管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/using-directed-migration-tool-migrate-brightcove-smart-players.html">ダイレクト移行ツールの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/viewing-billing-information.html">請求情報の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/training/index.html"><strong>トレーニング+ </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/training/online-training-courses.html">すべてのオンライントレーニングコース</a></li>
+                  
+                
+                  
+                    <li><a href="/training/register-training.html">インストラクター主導トレーニングへの登録</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud.html">トレーニング:ビデオクラウドの概要</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">トレーニング:ビデオクラウド分析の概要</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-video-cloud-basics.html">トレーニング:ビデオクラウドの基本</a></li>
+                  
+                
+                  
+                    <li><a href="/training/video-cloud-studio-training-videos.html">ビデオクラウドスタジオトレーニングビデオ</a></li>
+                  
+                
+                  
+                    <li><a href="/training/brightcove-university.html">Brightcove Universityトレーニングコース</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/index.html">リリースノート<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/release-notes/video-cloud-studio-release-notes.html">ビデオクラウドスタジオリリースノート</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/index.html"><strong>サポート+ </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/brightcove-answer.html">ブライトコーブの回答</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">ブライトコーブのシステムステータスページの表示</a></li>
+                  
+                
+                  
+                    <li><a href="/support/contact-sales.html">営業へのお問い合わせ</a></li>
+                  
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">サポートケースを開く</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="ナビゲーションメニュー"/></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">ページコンテンツ</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="新しいタブで開く" style="margin-top:4em;width: 1.5em;"/></a>
+
+
+
+  
+    
+
+
+<article class="bcls-article">
+  <h1>メディアモジュールを使用したメディア共有</h1>
+  <summary>このトピックでは、他のアカウントにビデオを共有する方法を学びます。</summary>
+  <section class="bcls-section">
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4703864538001">&nbsp;</div>
+    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script>
+    <p>メディア共有によって、パブリッシャーは動画を一度アップロードすると、他のアカウントに動画を共有することができます。そのアカウントは、ご自身のアカウント、企業アカウント、他のパブリッシャーのアカウントのいずれでも構いません。共有動画は、他のVideo Cloudアカウントで独自に利用できます。通常、メディア共有が使用されるのは、パブリッシャーが動画コンテンツのマスターアカウントを維持しながら、組織の他の部門または子会社と動画を共有したい場合です。</p>
+    <aside class="bcls-aside bcls-aside--information">
+      注: 
+      <ul>
+        <li>メディア共有は、Video CloudEnterpriseのお客様のみが利用できます。Video Cloudアカウントのアップグレードについては、ブライトコーブにお問い合わせください。</li>
+        <li>メディア共有は双方向にすることができます。各アカウントは、他のアカウントのマスターとアフィリエイトになることができます。</li>
+      </ul>
+    </aside>
+    <p>メディア共有は、CMS API を使用してプログラムで実装することもできます。詳細については、「<a href="https://apis.support.brightcove.com/cms/managing-videos/media-sharing-cms-api.html"> CMS API を使用したメディア共有</a>」を参照してください。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="terminology">メディア共有の用語</h2>
+    <p>このトピックでは、以下の用語を使用します。</p>
+    <ul>
+      <li><strong>マスター</strong> -元のビデオを作成したアカウント。マスターはコンテンツを所有し、コンテンツを設定、管理、アフィリエイトに提供する責任があります。</li>
+      <li><strong>アフィリエイト</strong> -動画を受信しているアカウント。アフィリエイトは、マスターから共有されたコンテンツを受け入れることができます。</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="limitations">メディア共有の制限</h2>
+    <ul>
+      <li>
+        <p>DRMを使用して保護されたビデオの共有は<strong>ない</strong>サポートされています。DRM 対応でないアカウントから DRM 対応のアカウントへのビデオの共有はサポートされますが、共有動画は DRM <strong>用にパッケージされません</strong>。</p>
+      </li>
+      <li>
+        <p>「ライブストリームをVODに変換」オプションを使用して作成されたビデオの共有は失敗します。ライブストリームをクリッピングして作成されたビデオで機能します。</p>
+      </li>
+      <li>
+        <p>共有ビデオは、元のビデオが可能な場合にのみ、オフラインで視聴できるようにダウンロードできます。このプロパティは元のビデオから継承され、共有ビデオに対してのみ変更することはできません。</p>
+      </li>
+      <li>
+        SSAI で共有ビデオを再生する場合、SSAI マクロ置換では、子ビデオの代わりに親ビデオのメタデータが使用されます。また、親動画がとしてマークされている場合、子動画にというラベルが付いている場合でも<code translate="No">Advertising='Free'</code>、SSAI <code translate="No">Ad Supported</code>は広告検索をスキップします。
+      </li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="manage">メディア共有関係の管理</h2>
+    <p>アカウント間で動画を共有する前に、メディア共有設定をの一部として構成する必要があります<strong>管理者&gt;メディア共有</strong>設定。アカウント管理者のみが[管理]メニューにアクセスできることに注意してください。他のアカウントと動画を共有する場合は、アフィリエイトを追加する必要があり、アフィリエイトアカウントはその関係に同意する必要があります。マスターアカウントとアフィリエイトアカウントは、いつでも関係を終了することができます。<strong>メディア共有関係を終了しても、アフィリエイトアカウントから共有動画が削除されることはありません</strong>。アフィリエイトのアカウントから共有動画を削除する場合は、自分の（マスター）アカウントから共有動画を削除するか、動画のプロパティを開き、[ <strong>メディア共有</strong> ] セクションに移動して、アフィリエイトアカウントの [ <strong>動画の削除</strong> ] アイコンをクリックします。</p>
+    <figure><img class="bcls-image--no-border" alt="" src="/assets/images/media/node18465-remove-video.png"/></figure>
+    <p>メディア共有設定を構成する方法については、「<a href="/admin/managing-media-sharing-settings.html">メディア共有設定の管理</a>」を参照してください。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="sharing">動画を共有する</h2>
+    <p>デフォルトでは、Mediaモジュールにアクセスできるアカウントの全ユーザーが動画を共有できます。動画を共有するには、次の手順を行います。</p>
+    <ol class="bcls-tasklist-restart">
+      <li>メディアモジュールを開き、1つ以上のビデオを選択して、[ <strong>詳細&gt;共有</strong>。
+        <aside class="bcls-aside bcls-aside--information">注：多数の動画を共有する場合、ブライトコーブは一度に最大 50 本の動画を共有することをお勧めします。一度に多数の動画を共有すると、Studioでタイムアウトエラーが発生する場合があります。多数の動画を共有する必要がある場合は、<span translate="No">CMS API</span>使用すべきです。</aside>
+      </li>
+      <li>動画を共有するアフィリエイトアカウントを選択し、[ <strong>共有</strong> ] をクリックします。検索フィールドを使用して、アカウント ID を検索できます。検索フィールドはあいまい検索をサポートしているため、ID の一部を入力すると一致が返されます。
+        <figure><img alt="" src="/assets/images/media/node18465-select-accounts.png"/></figure>
+      </li>
+    </ol>
+    <p>動画を再共有（以前に共有した動画を同じアカウントで共有する）ことは可能です。これにより、アフィリエイトアカウントによって行われた動画メタデータの変更は、マスター (共有) アカウントの値に置き換えられます。動画を再共有するときは注意してください。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="review">共有動画を確認する</h2>
+    <p>アフィリエイトアカウントには、<strong>マスターアカウントごとに承認モードを設定できます</strong>。いつ<strong>受け入れモード</strong>です<strong>自動</strong>、共有動画は、メディアモジュールのアフィリエイトアカウントの動画リストに表示されます。いつ<strong>受け入れモード</strong>です<strong>マニュアル</strong>、<strong>保留中の株式</strong>共有動画の数を表示するリンクがメディアモジュールに表示されます。</p>
+    <aside class="bcls-aside bcls-aside--information">注：承認モードの設定については、「<a href="/admin/managing-media-sharing-settings.html">メディア共有設定の管理</a>」を参照してください。</aside>
+    <figure><img alt="" src="/assets/images/media/node18465-shares-pending.png"/></figure>
+    <p>[<strong>共有保留</strong>]リンクをクリックすると、共有動画のリストが表示されます。</p>
+    <figure><img alt="" src="/assets/images/media/node18465-shares-pending-list.png"/></figure>
+    <p>共有保留リストから、以下ができます。</p>
+    <ul>
+      <li><strong>拒否</strong> - 共有動画を拒否し、お客様のアカウントに入れません。共有動画を拒否しても、今後マスターがアカウントに再度共有できなくなるわけではありません。</li>
+      <li><strong>同意する</strong> -あなたのアカウントに共有ビデオを受け入れます。</li>
+    </ul>
+    <p><strong>クイックビューを使用すると</strong>、パネルを開いてビデオのプロパティを表示できます。共有動画を承諾すると、その動画はMediaモジュールの[共有保留]リストに表示されなくなり、[すべての動画]ビューに表示されるようになります。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="view">Mediaモジュールにおける共有動画</h2>
+    <p>共有動画は、動画のサムネイルの上隅に共有アイコンが表示され、その動画がアカウント内またはアカウントから共有されたことを示します。</p>
+    <div class="BCL-subsection">
+      <h3>このアカウントが共有先である動画</h3>
+      <p>共有アイコン（<img alt="" src="/assets/images/media/node15924-shared-in-icon.png"/>）をポイントすると、共有の詳細が表示されます。</p>
+      <figure><img alt="" src="/assets/images/media/node18465-shared-in.png"/></figure>
+    </div>
+    <section class="bcls-subsection">
+      <h3>このアカウントが共有元である動画</h3>
+      <p>共有アイコン（<img alt="" src="/assets/images/media/node15924-shared-out-icon.png"/>）をポイントすると、共有の詳細が表示されます。</p>
+      <figure><img alt="" src="/assets/images/media/node18465-shared-out.png"/></figure>
+    </section>
+    <p>マスターアカウントは、を使用してアフィリエイトアカウントに共有されたビデオのステータスを確認できます<strong>メディア共有</strong>ビデオプロパティページのセクション。</p>
+    <figure><img alt="" src="/assets/images/media/node18465-media-sharing-status.png"/></figure>
+    <p>エラーはここにも表示されることがあります。たとえば、<strong> [カスタム項目の照合を強制する</strong> ] がオンの場合、アフィリエイトアカウントにはマスターアカウントと同じカスタム項目が必要です。カスタムフィールドがないと、共有が失敗します。</p>
+    <figure><img alt="" src="/assets/images/media/node18465-media-sharing-error.png"/></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="delete">共有動画を削除する</h2>
+    <p>共有動画がマスターアカウントから削除されると、共有した動画を削除すると、その動画を共有しているすべてのアフィリエイトアカウントから削除されることを知らせるメッセージが表示されます。</p>
+    <figure><img alt="" src="/assets/images/media/node18465-delete-shared-video.png"/></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="properties">共有ビデオのプロパティ</h2>
+    <p>動画がアフィリエイトアカウントで共有されると、次の動画プロパティが共有動画とともにコピーされます。</p>
+    <ul>
+      <li>名前</li>
+      <li>短い説明と長い説明</li>
+      <li>参照ID（共有先のアフィリエイトアカウントに同じ参照IDの動画がある場合には、エラーメッセージが表示され、動画共有に失敗します。参照IDの命名規則を工夫し、アフィリエイトと同じ参照IDを使用しないようにしてください）</li>
+      <li>関連リンク（リンクテキストとリンクURL）</li>
+      <li>タグ</li>
+      <li>ビデオプロジェクション</li>
+      <li>サムネイルとポスター画像-デフォルトでは、マスタービデオのポスターとサムネイル画像はアフィリエイトアカウントで使用されます。マスターアカウントのポスターおよび/またはサムネイルに変更が加えられた場合、<strong>アフィリエイトアカウントが以前に新しいポスターまたはサムネイル画像を生成していない限り</strong>、それらの変更はアフィリエイトアカウントに反映されます。アフィリエイトアカウントがポスターやサムネイル画像に変更を加えると、<strong>マスターアカウントで行われたポスター/サムネイルへの変更はアフィリエイトアカウントには反映されません</strong>。</li>
+      <li>テキストトラック-アフィリエイトには、共有動画のテキストトラックプロパティを削除または編集することはできません。</li>
+      <li>広告（無料/広告サポート）</li>
+      <li>広告キー</li>
+      <li>開始日と終了日の設定</li>
+      <li>地理的制限-パブリッシャーは、マスターアカウントとアフィリエイトアカウントが地理的制限に関して同じように構成されていることを確認する必要があります。</li>
+      <li>関連付けられたメタデータを持つキューポイント</li>
+      <li>カスタムフィールド-マスターアカウントが<strong> [カスタムフィールドマッチングを強制する</strong> ] に設定されている場合、アフィリエイトアカウントにはマスターアカウントと同じカスタムフィールドが必要です。カスタムフィールドがないと、共有が失敗します。</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">注：カスタムフィールドがリストタイプの場合、カスタムフィールドには両方のアカウントで同じオプションが必要です。</aside>
+    <p>共有ビデオには、マスタービデオが共有された時点で保持していたビデオメタデータフィールドのすべての値が含まれます。ただし、その時点から、マスターコピーとアフィリエイトコピーは独立したエンティティになります。</p>
+    <ul>
+      <li>メディア共有の使用時には動画ファイルはコピーされません。動画メタデータのみがコピーされます。共有動画は、ご自身のアカウントのオリジナルの動画をポイントしています。</li>
+      <li>マスターアカウントから動画を削除すると、その動画はすべてのアフィリエイトアカウントから削除されます。</li>
+      <li>アフィリエイトが動画に加えた変更は、オリジナルまたは他の共有コピーには影響しません。アフィリエイトが共有動画を削除した場合、その動画はアフィリエイトのアカウントから削除されますが、マスターアカウントと他のすべてのアフィリエイトアカウントには残ります。</li>
+      <li>アフィリエイトは、メディアモジュールを使用してテキストトラックを削除または更新することはできません。</li>
+      <li>アフィリエイトが動画を共有して受信すると、その動画はアクティブな状態になります。これは、ビデオがマスターアカウントでアクティブでない場合でも当てはまります。</li>
+      <li>アフィリエイトが動画を受け入れ、必須フィールドがない場合、動画は無効になります。</li>
+      <li>共有動画を受信したアフィリエイトアカウントは、その動画を別のアカウントと共有することはできません。マスターアカウントのみがビデオを共有できます。</li>
+      <li>各アカウントにおける共有動画の再生（動画の再生および帯域幅の使用）に対して、それぞれのアカウントへ別々に請求が行われます。</li>
+      <li>共有動画のレポートは各アカウント固有で、それぞれのアカウントの個々の動画コピーの情報を集約したものではありません。</li>
+    </ul>
+    <p>動画を再共有（以前に共有した動画を同じアカウントで共有する）ことは可能です。これにより、アフィリエイトアカウントによって行われた動画メタデータの変更は、マスター (共有) アカウントの値に置き換えられます。動画を再共有するときは注意してください。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="renditions">共有ビデオレンディション</h2>
+    <p>ビデオはアフィリエイトアカウントに共有できます<strong>前</strong>トランスコーディングが完了しました。共有ビデオを受信するアフィリエイトアカウントは、マスターアカウントで作成されたレンディションにアクセスできます。ソースアカウントの動画が再トランスコードされた場合、またはソースファイルが変更された場合、それらの変更は共有された動画を受領したアフィリエイトアカウントでも反映されます。</p>
+    <p>アフィリエイトアカウントは、共有ビデオのソースファイルを再トランスコードまたは置換することはできません。</p>
+  </section>
+  <!--<div class="bcls-section">
+  <h2 id="drm">Media sharing & DRM</h2>
+  <p>If a master account shares a DRM-enabled video to an affiliate account that does not have DRM enabled, the shared video will be DRM-enabled in the affiliate account. If a master account without DRM shares a  video to an affiliate account that has  DRM enabled, the shared video will not be DRM-enabled in the affiliate account. Affiliate accounts have no control over the renditions so DRM can't be added to the shared video.</p>
+</div>-->
+  
+  <section class="bcls-section">
+    <h2 id="billing">共有メディアと請求</h2>
+    <p>アカウント間で共有されるメディアが請求にどのように影響するかについて、よく質問があります。パブリッシャー間で共有されているコンテンツについて、請求がどのように処理されるかを説明するシナリオを下にいくつか示します。</p>
+    <h3>シナリオ1</h3>
+    <ul>
+      <li>パブリッシャーAとパブリッシャーBはブライトコーブCDN上にコンテンツを持っている</li>
+      <li>パブリッシャーAはパブリッシャーBと共有する</li>
+      <li>パブリッシャーBはストリームと帯域に対してブライトコーブに支払う</li>
+    </ul>
+    <h3>シナリオ2</h3>
+    <ul>
+      <li>パブリッシャーAはBYO CDNを使用している</li>
+      <li>パブリッシャーBはブライトコーブCDNまたはBYO CDN上にいる（どちらかは関係なし）</li>
+      <li>パブリッシャーAはパブリッシャーBと共有する</li>
+      <li>パブリッシャーBはストリームに対してブライトコーブに支払う。パブリッシャーAは帯域幅に対してご自身のCDNに支払う</li>
+    </ul>
+    <h3>シナリオ3</h3>
+    <ul>
+      <li>パブリッシャーAはブライトコーブCDN上にコンテンツを持っている</li>
+      <li>パブリッシャーBはBYO CDNを使用している</li>
+      <li>パブリッシャーAはパブリッシャーBと共有する</li>
+      <li>パブリッシャーBはストリームと帯域幅に対してブライトコーブに支払う。この場合、請求パラメーターが渡されると仮定している。請求パラメーターを適切に渡さないカスタム動画プレーヤーが作成されたために請求パラメーターが渡されないという極端的な例が今までにありました。</li>
+    </ul>
+    <h3>シナリオ4-コンテンツはOriginからフェッチする必要があります</h3>
+    <p>アカウントIDを渡します&nbsp;すべてのリクエストで&nbsp;各アカウントが独自のオリジンアクセスに対して請求されるようにします。だからもし<strong>共有者</strong>アカウントはCDNキャッシュを頻繁に見逃し、コンテンツの元に戻らなければなりません。<strong>共有者</strong>そのために請求されます。の場合<strong>Sharee</strong>アカウントはCDNキャッシュを頻繁に見逃し、コンテンツの元に戻らなければなりません。<strong> Sharee</strong>アカウントはそのために請求されます。CDN構成シナリオに関係なく、Originアクセスの料金は別途異なります。</p>
+    <h3>シナリオ5-画像</h3>
+    <p>ダイナミックデリバリーのデフォルトでは、マスターアカウント（画像の作成者）は、共有アセットに関連付けられたすべての画像トラフィックに対して請求されます。アフィリエイトアカウントが共有コンテンツの新しい画像をアップロードまたはキャプチャすると、画像トラフィックが関連付けられ、アフィリエイトアカウントに請求されます。</p>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">ページコンテンツ</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  ページの最終更新日：2020年12月11日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>ブライトコーブサポート</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">システムステータス</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">サポートへのお問い合わせ</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">ドキュメンテーション</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>トレーニング</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">オンラインコース</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">コースに登録する</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">Brightcove University</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">お問合せ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">プライバシー</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <style>
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>
