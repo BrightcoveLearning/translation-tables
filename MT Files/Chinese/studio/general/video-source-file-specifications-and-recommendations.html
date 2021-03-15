@@ -1,0 +1,1327 @@
+﻿<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Brightcove 建議您對上傳至媒體庫的視訊檔案使用下列編碼規格。">
+  
+  <title>視訊來源檔規格與建議</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Video_Cloud_Logo.svg" alt="產品標誌" style="max-height: 100px;max-width: 232px;"/></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">選擇語言</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+    <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+      <option value="">其他布萊特灣文件</option>
+      
+        
+          <option value="https://support.brightcove.com">文件首頁</option>
+        
+      
+        
+          <option value="https://audience.support.brightcove.com">布萊特灣觀眾</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">布萊特灣燈塔</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">布萊特灣戰役</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">布萊特灣參與</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">Brightcove 圖庫</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">布萊特灣</option>
+        
+      
+        
+          <option value="https://social.support.brightcove.com">布萊特灣社會</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">視訊雲端工作室</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">布萊特灣球員開發</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">視訊雲端平台 API</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">視訊雲端裝置開發套件</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">整合與 CMS 連接器</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">視訊雲端一般資訊</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+        
+      
+    </select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="支持"/>聯繫支持</a><span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span><a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="系統狀態"/>系統狀況</a></span><br/>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">首頁</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/general/">一般資訊</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">視訊來源檔規格與建議</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+                  <div class="col-sm-3 left-side-bar">
+        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+          <option value="">Otros documentos de Brightcove</option>
+          
+            
+              <option value="https://support.brightcove.com">Documentación Inicio</option>
+            
+          
+            
+              <option value="https://audience.support.brightcove.com">Audiencia de Brightcove</option>
+            
+          
+            
+              <option value="https://beacon.support.brightcove.com">Baliza Brightcove</option>
+            
+          
+            
+              <option value="https://campaign.support.brightcove.com">Campaña de Brightcove</option>
+            
+          
+            
+              <option value="https://engage.support.brightcove.com">Brightcove Engage</option>
+            
+          
+            
+              <option value="https://live.support.brightcove.com">Brightcove Live</option>
+            
+          
+            
+              <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+            
+          
+            
+              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+            
+          
+            
+              <option value="https://social.support.brightcove.com">Brightcove Social</option>
+            
+          
+            
+              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+            
+          
+            
+              <option value="https://player.support.brightcove.com">Desarrollo de jugadores de Brightcove</option>
+            
+          
+            
+              <option value="https://apis.support.brightcove.com">API para la plataforma de Video Cloud</option>
+            
+          
+            
+              <option value="https://sdks.support.brightcove.com">SDK de dispositivos de Video Cloud</option>
+            
+          
+            
+              <option value="https://integrations.support.brightcove.com">Integraciones y conectores CMS</option>
+            
+          
+            
+              <option value="https://general.support.brightcove.com">Información general de Video Cloud</option>
+            
+          
+            
+              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+            
+          
+        </select>
+
+        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+          <option value="">Weitere Brightcove Docs</option>
+          
+            
+              <option value="https://support.brightcove.com">Dokumentation Home</option>
+            
+          
+            
+              <option value="https://audience.support.brightcove.com">Brightcove Publikum</option>
+            
+          
+            
+              <option value="https://beacon.support.brightcove.com">Brightcove Leuchtfeuer</option>
+            
+          
+            
+              <option value="https://campaign.support.brightcove.com">Brightcove Kampagne</option>
+            
+          
+            
+              <option value="https://engage.support.brightcove.com">Brightcove Engage</option>
+            
+          
+            
+              <option value="https://live.support.brightcove.com">Brightcove Live</option>
+            
+          
+            
+              <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+            
+          
+            
+              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+            
+          
+            
+              <option value="https://social.support.brightcove.com">Brightcove Social</option>
+            
+          
+            
+              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+            
+          
+            
+              <option value="https://player.support.brightcove.com">Brightcove Spieler-Entwicklung</option>
+            
+          
+            
+              <option value="https://apis.support.brightcove.com">APIs für Video Cloud-Plattform</option>
+            
+          
+            
+              <option value="https://sdks.support.brightcove.com">Videocloud-Geräte-SDKs</option>
+            
+          
+            
+              <option value="https://integrations.support.brightcove.com">Integrationen und CMS-Konnektoren</option>
+            
+          
+            
+              <option value="https://general.support.brightcove.com">Video Cloud — Allgemeine Informationen</option>
+            
+          
+            
+              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+            
+          
+        </select>
+
+        <nav class="sidenav" id="side_nav">
+          
+            
+            <h5><a href="/index.html">首頁</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/index.html">開始使<strong>用 + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/get-started/getting-started-video-cloud-studio.html">開始使用視訊雲端工作室</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/getting-started-your-video-cloud-trial.html">開始使用視訊雲端試用</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/navigating-brightcove-support-site.html">瀏覽布萊特灣支援網站</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/quick-start-video-cloud.html">視訊雲端快速入門</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/step-step-video-cloud-studio-publishing-workflow.html">逐步：視訊雲端發佈工作流程</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">訓練：視訊雲端分析簡介</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud.html">訓練：視訊雲端簡介</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-video-cloud-basics.html">訓練：視訊雲端基礎知識</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/video-cloud-glossary.html">視訊雲端詞彙</a></li>
+                  
+                
+                  
+                    <li><a href="/training/video-cloud-studio-training-videos.html">視頻雲端工作室培訓視頻</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/basics/index.html">學習基本知識<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-activating-and-deactivating-video.html">啟用和停用視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-adding-user-video-cloud-account.html">將使用者新增至視訊雲端帳戶</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html">擷取視訊海報和縮圖影像</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-manual-playlist.html">建立手動播放清單</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-player.html">建立播放程式</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-playlist-player.html">建立播放清單播放器</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-smart-playlist.html">建立智慧型播放清單</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-determining-how-much-video-being-watched.html">決定觀看影片的數量</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-determining-which-videos-have-most-views.html">判斷哪些影片的觀看次數最多</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-editing-basic-video-properties.html">編輯基本視訊屬性</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-editing-video-properties-multiple-videos.html">編輯多個視訊的視訊屬性</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-organizing-videos-using-folders.html">使用資料夾組織視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-publishing-playlist-web.html">將播放清單發佈至網路</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-publishing-single-video-web.html">將單一視訊發佈至網路</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-styling-player.html">設定播放器樣式</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html">上傳影片海報和縮圖影像</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-uploading-videos.html">上傳視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-viewing-brightcove-system-status-page.html">檢視布萊特灣系統狀態頁面</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/general/index.html">一般資訊<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/general/adding-facebook-button-brightcove-player.html">向玩家添加臉書的讚好按鈕</a></li>
+                  
+                
+                  
+                    <li><a href="/general/best-practices-video-creating-transcoding-and-uploading-workflow.html">最佳實務：轉碼和上傳</a></li>
+                  
+                
+                  
+                    <li><a href="/general/content-delivery-options.html">內容傳遞選項</a></li>
+                  
+                
+                  
+                    <li><a href="/general/creating-audio-only-renditions-low-bandwidth-delivery.html">建立僅音訊轉譯</a></li>
+                  
+                
+                  
+                    <li><a href="/general/domains-and-ports-must-be-accessible-video-cloud.html">必須可存取的網域和連接埠</a></li>
+                  
+                
+                  
+                    <li><a href="/general/drm-output-protection-settings.html">DRM 輸出保護設定</a></li>
+                  
+                
+                  
+                    <li><a href="/general/enabling-longer-videos-youtube.html">在 YouTube 上啟用較長的影片</a></li>
+                  
+                
+                  
+                    <li><a href="/general/making-your-video-content-indexable.html">將您的影片內容設為索引</a></li>
+                  
+                
+                  
+                    <li><a href="/general/optimal-video-dimensions.html">最佳視訊尺寸</a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-context-aware-encoding.html">上下文感知編碼概述</a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-digital-rights-management-drm-video-cloud.html">概述：數位版權管理 (DRM) </a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-dynamic-delivery.html">動態傳遞概觀</a></li>
+                  
+                
+                  
+                    <li><a href="/general/protecting-videos-hls-encryption.html">使用 HLS 加密保護視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/general/resetting-your-studio-password.html">重設您的工作室密碼</a></li>
+                  
+                
+                  
+                    <li><a href="/general/sharing-videos-twitter-player-cards.html">分享視頻到推特玩家卡</a></li>
+                  
+                
+                  
+                    <li><a href="/general/studio-system-requirements.html">錄音室系統需求</a></li>
+                  
+                
+                  
+                    <li><a href="/general/supported-video-and-audio-formats-codecs-and-containers.html">支援的視訊和音訊格式</a></li>
+                  
+                
+                  
+                    <li><a href="/general/tls-media-player-and-api-urls.html">媒體、播放程式和 API 網址的 TLS </a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-cloud-architecture-overview.html">視訊雲端架構概觀</a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-cloud-studio-cookies.html">視頻雲端工作室曲奇</a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-source-file-specifications-and-recommendations.html">視訊來源檔規格與建議</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-360deg-videos.html">使用 360 度視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-audio-content.html">使用僅限音訊的內容</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-multiple-video-cloud-accounts.html">使用多個帳戶</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/media/index.html">管理視訊<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/media/adding-audio-tracks-videos-using-media-module.html">新增音軌至視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/media/adding-captions-videos-using-media-module.html">新增字幕至視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/media/adding-chapters-video.html">新增章節至視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/media/capturing-poster-and-thumbnail-images.html">擷取海報和縮圖影像</a></li>
+                  
+                
+                  
+                    <li><a href="/media/configuring-video-availability.html">設定視訊可用性</a></li>
+                  
+                
+                  
+                    <li><a href="/media/creating-and-managing-playlists.html">建立和管理播放清單</a></li>
+                  
+                
+                  
+                    <li><a href="/media/downloading-videos-video-cloud.html">從視訊雲端下載視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/media/editing-video-properties-using-media-module.html">編輯視訊屬性</a></li>
+                  
+                
+                  
+                    <li><a href="/media/editing-video-properties-using-quick-edit.html">使用「快速編輯」編輯性質</a></li>
+                  
+                
+                  
+                    <li><a href="/media/exporting-video-data.html">匯出視訊資料</a></li>
+                  
+                
+                  
+                    <li><a href="/media/getting-started-media-module.html">開始使用媒體模組</a></li>
+                  
+                
+                  
+                    <li><a href="/media/how-search-videos-and-playlists-media-module.html">如何搜尋影片和播放清單</a></li>
+                  
+                
+                  
+                    <li><a href="/media/increasing-quality-poster-and-thumbnail-images.html">提高海報影像的品質</a></li>
+                  
+                
+                  
+                    <li><a href="/media/introduction-playlists.html">播放清單簡介</a></li>
+                  
+                
+                  
+                    <li><a href="/media/media-sharing-using-media-module.html">媒體分享</a></li>
+                  
+                
+                  
+                    <li><a href="/media/organizing-videos-using-folders.html">使用資料夾組織視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/media/overview-adding-captions-video.html">概述：在影片中新增字幕</a></li>
+                  
+                
+                  
+                    <li><a href="/media/replacing-video-source-file.html">取代視訊來源檔</a></li>
+                  
+                
+                  
+                    <li><a href="/media/retranscoding-videos-using-media-module.html">重新轉碼影片</a></li>
+                  
+                
+                  
+                    <li><a href="/media/setting-required-fields-videos.html">設定必要欄位</a></li>
+                  
+                
+                  
+                    <li><a href="/media/styling-captions.html">樣式註解</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-poster-and-thumbnail-images.html">上傳海報和縮圖影像</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-videos-using-upload-module.html">上傳視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-videos-remote-urls.html">上傳視訊遠端網址</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-cue-points-media-module.html">使用提示點</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-multi-lingual-metadata.html">使用多語言中繼資料</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-remote-asset-videos.html">使用遠端資產視訊</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">管理雲播出頻道<strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">概述：雲播出</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">創建雲播出頻道</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">使用頻道動作</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">通過雲播放獲利</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">生成通道嵌入代碼</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">查看頻道輸出和分析</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/players/index.html">管理玩家<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">添加縮略圖搜索</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">設定播放器覆蓋</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-adobe-analytics-event-tracking.html">設定 Adobe 分析事件追蹤</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-google-analytics-event-tracking.html">配置谷歌分析事件跟踪</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-advertising-using-players-module.html">設定播放器廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-content-restrictions.html">設定播放程式內容限制</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-controls.html">設定播放程式控制</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-endscreen.html">設定播放程式端螢幕</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-localization.html">設定播放程式本地化</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-playback-properties.html">設定播放程式播放內容</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-plugins.html">設定播放程式外掛</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-social-properties-player.html">設定社交屬性</a></li>
+                  
+                
+                  
+                    <li><a href="/players/generating-player-embed-code.html">產生播放器內嵌程式碼</a></li>
+                  
+                
+                  
+                    <li><a href="/players/getting-started-players-module.html">開始使用玩家模組</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-information-properties.html">設定播放程式資訊屬性</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-properties.html">設定播放程式屬性</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-update-mode-and-version.html">設定播放器更新模式</a></li>
+                  
+                
+                  
+                    <li><a href="/players/styling-players.html">造型播放器</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/publish/index.html">發佈影片與播放器<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/publish/adding-3play-media-interactive-transcript-video.html">新增 3Play 媒體互動式成績單</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/adding-application-id-player-embed-code.html">將應用程式識別碼新增至內嵌程式碼</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/adding-brightcove-player-facebook-fan-page.html">新增玩家至臉書粉絲專頁</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/changing-video-player-without-changing-embed-code.html">變更播放器中的視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/choosing-correct-embed-code.html">選擇正確的內嵌程式碼</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/creating-and-publishing-high-quality-screencasts.html">建立與發佈高品質螢幕錄影</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/deep-linking.html">深層連結</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/driving-video-views-through-email.html">透過電子郵件推動視訊觀看</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/dynamically-assigning-videos-player.html">動態指派視訊給播放器</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/embedding-brightcove-player-google-sites-page.html">將播放程式嵌入 Google 協作平台網頁</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-player-wordpress-page.html">在 WordPress 頁面中發布播放器</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-players-facebook-instant-articles.html">在臉書即時文章中發布玩家</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-players-joomla.html">在 Joomla 中出版玩家</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-video-email.html">將視訊發佈至電子郵件</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-videos-and-playlists-media-module.html">發佈影片和播放清單</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-videos-page-experience.html">將視訊發佈至頁面內體驗</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/step-step-using-players-module-create-and-publish-player.html">逐步：建立和發佈播放程式</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/using-multiple-players-one-page.html">在一個頁面上使用多個玩家</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/using-reference-ids.html">使用參考 ID </a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/analytics/index.html">檢閱分析<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/analytics/analytics-module-ui-glossary.html">分析模組使用者介面詞彙</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/analytics-report-reference.html">分析報表參考</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/calculating-video-engagement-score.html">計算影片參與分數</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/creating-custom-analytics-reports.html">建立自訂分析報表</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/engagement-report-reference.html">業務開發報表參考</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/exporting-data-analytics-module.html">匯出資料</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/faq-analytics-module.html">常見問題集：分析模組</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/getting-started-analytics-module.html">開始使用分析模組</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/how-search-videos-analytics-module.html">如何搜尋影片</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/managing-scheduled-reports.html">管理預約報告</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/performance-report-reference.html">績效報告參考</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">在谷歌分析中審查玩家活動</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">現在趨勢報告參考</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/index.html">管理帳號<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/admin/authenticating-studio-users-using-single-sign.html">使用 SSO 驗證工作室使用者</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/configuring-language-settings.html">設定語言設定</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/configuring-server-side-ad-settings.html">設定伺服器端廣告設定</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-custom-metadata-fields.html">建立自訂中繼資料欄位</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-ingest-profiles-context-aware-encoding.html">創建用於上下文感知編碼的攝取配置文件</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-ingest-profiles-dynamic-delivery.html">創建用於動態投放的提取配置文件</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/ingest-profiles-best-practices.html">內嵌設定檔的最佳作法</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-account-information.html">管理帳戶資訊</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-account-settings.html">管理帳戶設定</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-api-authentication-credentials.html">管理 API 身份驗證憑證</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-ingest-profiles.html">管理內嵌設定檔</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-media-sharing-settings.html">管理媒體共用設定</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-profile-information.html">管理設定檔資訊</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準內嵌設定檔 (DD 與 CAE) </a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-users.html">管理使用者</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/using-directed-migration-tool-migrate-brightcove-smart-players.html">使用導向移轉工具</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/viewing-billing-information.html">檢視帳單資訊</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/training/index.html">訓練<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/training/online-training-courses.html">所有線上訓練課程</a></li>
+                  
+                
+                  
+                    <li><a href="/training/register-training.html">註冊參加講師指導訓練</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud.html">訓練：視訊雲端簡介</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">訓練：視訊雲端分析簡介</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-video-cloud-basics.html">訓練：視訊雲端基礎知識</a></li>
+                  
+                
+                  
+                    <li><a href="/training/video-cloud-studio-training-videos.html">視頻雲端工作室培訓視頻</a></li>
+                  
+                
+                  
+                    <li><a href="/training/brightcove-university.html">布萊特灣大學培訓課程</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/index.html">版本說明<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/release-notes/video-cloud-studio-release-notes.html">影片雲端工作室發行紀錄</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/index.html">支援<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/brightcove-answer.html">布萊特灣答案</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">檢視布萊特灣系統狀態頁面</a></li>
+                  
+                
+                  
+                    <li><a href="/support/contact-sales.html">聯絡銷售人員</a></li>
+                  
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">開啟支援案例</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="導覽功能表"/></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">頁面內容</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="在新分頁中開啟" style="margin-top:4em;width: 1.5em;"/></a>
+
+
+
+  
+    
+
+
+<h1>視訊來源檔規格與建議</h1>
+<article class="bcls-article">
+  <summary>Brightcove 建議您對上傳至媒體庫的視訊檔案使用下列編碼規格。</summary>
+  <section class="bcls-section">
+    <h2 id="introduction">簡介</h2>
+    <p>Brightcove 建議您對上傳至媒體庫的視訊檔案使用下列編碼規格。</p>
+    <p>Video Cloud支持H.264和H.265（請參閱<a href="#hevc">混合動力汽車</a>下面）的編碼。一般而言，建議使用 H.264，因為它提供更廣泛的裝置支援。H.264 視訊編碼將使用 AAC 音訊。</p>
+    <p>如果您不熟悉Video Cloud的媒體模塊，請閱讀<a href="/media/getting-started-media-module.html">媒體模塊入門</a>，其中說明了媒體模塊的基本功能以及如何啟動它。另請閱讀<a href="/media/uploading-videos-using-upload-module.html">使用上傳模塊上傳視頻</a>，以獲取有關如何將視頻上傳到媒體模塊的說明。</p>
+    <p>看到<a href="/general/supported-video-and-audio-formats-codecs-and-containers.html">支持的視頻格式，編解碼器和容器</a>有關Brightcove的視頻格式的信息<strong>不</strong>支持（數量不多）。</p>
+    <p>Brightcove 建議您對上傳至媒體庫的視訊檔案使用下列規格：</p>
+    <ul>
+      <li><a href="#source_file_naming">源文件命名</a></li>
+      <li><a href="#h264">H.264（MPEG-4 Part 10）編碼建議</a></li>
+      <li><a href="#highres">高分辨率編碼建議</a></li>
+      <li><a href="#mobile">移動應用程序編碼</a></li>
+      <li><a href="#aspect">保持寬高比</a></li>
+    </ul>
+    <h3 id="hevc">HEVC (H.265) 影片</h3>
+    <p>高效率視訊編碼 ( <a href="https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding"> HEVC </a> ) 也稱為 H.265，是視訊壓縮標準，設計成廣泛使用的<a href="https://en.wikipedia.org/wiki/Advanced_Video_Coding">進階視訊編碼 (AVC/H.264) </a>的後續廠商。與 AVC 相比，HEVC 在相同等級的視訊品質下，提供大約 20% 的資料壓縮，或以相同位元速率大幅改善視訊品質。</p>
+    <p>這項改良壓縮的優點包括降低頻寬使用量、以較低的位元速率提供更高的視訊品質，以及縮短第一個影格 (TTFF) 的時間，這一切都會提高終端檢視者滿意度。</p>
+    <h3>缺點</h3>
+    <p>主要缺點是，因為它是一種新技術，HEVC 視頻尚未被客戶端廣泛支持（意味著設備 + OS + 瀏覽器/應用程序）。此外，有些用戶端可以在播放期間切換 HEVC 和 AVC 區段，而其他用戶端則無法切換。</p>
+    <p>此外，HEVC 影片的轉碼時間比 H.264 還要花費大約 2-4 倍的時間。</p>    <h4>可用性</h4>
+    <p>HEVC支持是<strong><em>付費附件</em></strong>視頻雲。如果您對 HEVC 支援有興趣，請聯絡您的客戶經理。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="source_file_naming">來源檔案命名</h2>
+    <p>在擷取程序期間，必須將來源檔案名稱作為 API 要求 URL 的一部分傳遞。因此，名稱必須與 URI 相容。請避免在所有視訊和資產的來源檔案名稱中使用下列項目：</p>
+    <ul>
+      <li><strong>空格</strong>：而不是<code translate="No">my video.mov</code>，使用<code translate="No">my-video.mov</code>或<code translate="No">my_video.mov</code></li>
+      <li><strong>特殊字元</strong>：請<strong>勿</strong>在來源檔案名稱中使用下列字元：<code translate="No">"!", "@", "#", "$", "%", "^", "&amp;", "*", "(", ")", "?", "/", "\", "{", "}", "[", "]"</code></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="h264">H.264 編碼建議</h2>
+    <table class="bcls-table">
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><strong>視頻編解碼器：</strong></td>
+          <td>h264</td>
+        </tr>
+        <tr>
+          <td><strong>編碼方式：</strong></td>
+          <td>兩次通過 H.264</td>
+        </tr>
+        <tr>
+          <td><strong>關鍵幀：</strong></td>
+          <td>至少每 6 秒</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="highres">高解析度編碼建議</h2>
+    <p>若要進行高解析度的影片轉譯，請上傳 H.264 來源檔案至視訊雲端。布萊特灣測試了不同大小和寬高比的 H.264 檔案。以下每種情況都假設使用 16 位元 AAC 音訊的 H.264 2 通道編碼，採樣頻率為 44.1kHz，而位元速率為 192 kbps。所有位元速率不包含音訊位元速率，只包含視訊。在討論中，我們會補償音訊，並提供視訊上傳至伺服器端轉碼服務的近似最大長度。如果視訊交錯，視訊雲端會在轉碼期間解除交錯。如果您尚未使用 Video Cloud 進行影片轉碼，請先解除交錯的影片檔案，再上傳影片檔案。關鍵畫面的最大距離應為 6 秒，且不需要等距。</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>大小</th>
+          <th>長寬比</th>
+          <th>建議的最小位元速率</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>640x480</td>
+          <td>4:3</td>
+          <td>動作少許的視訊 (例如說話頭) 可以低至 900 kbps，效果非常好。無論動作程度如何，都能獲得整體高品質，請使用至少 2672 kbps。這也指的是 720x480 源，因為它們的意思是 640x480，但具有不同的像素寬高比。</td>
+        </tr>
+        <tr>
+          <td>640x360</td>
+          <td>16:9</td>
+          <td>在幾乎所有情況下，視訊位元速率都能安全地降低至 2132 kbps。</td>
+        </tr>
+        <tr>
+          <td>1024x768</td>
+          <td>4:3</td>
+          <td>此格式主要用於螢幕廣播或裁切的 HD 來源。在視頻的情況下，4864 kbps 就足夠了。在屏幕截圖的情況下，我們並不需要那麼多的數據，因為從幀到幀的變化很少。我們可以擺脫 720p 的低端，這是 3136 kbps。這實際上比我們需要的要多一些，但我們建議使用更高的位元速率，以允許更頻繁的關鍵影格。因為我們不想要鼠標的奇怪鬼影，所以最好有非常頻繁的關鍵幀放置等距，每秒兩次（所以在非常平滑的屏幕截圖的情況下，每 15 幀）。如果屏幕截圖的幀速率不是 30（或 29.97），則可以平行調整數據速率。所以，如果你有一個 15 幀速率的屏幕轉播，數據速率將是 1568 kbps。這對於螢幕廣播來說是很大的頻寬，但是有必要消除移動到 H.264 之類的東西時常發生的鬼影和頁面撕裂。</td>
+        </tr>
+        <tr>
+          <td>1280x720</td>
+          <td>16:9</td>
+          <td>這種格式的數據速率可以低至 3136 kbps，對於一個說話的頭。當運動增加時，即使是一點點，比特速率必須增加相當多的補償。在低動作的情況下（意味著主體移動，但相機/框架沒有），假設照明充足或理想，4512 kbps 就足夠了。對於高動作或補償其他因素，5928 kbps 就足夠了（有一點呼吸空間）。</td>
+        </tr>
+        <tr>
+          <td>1920x1080</td>
+          <td>16:9 拉伸來源</td>
+          <td>許多 HDV 和 AVCHD 相機，即使是專業級別，也使用 4:3 感應器，並將影像從 1440x1080 延伸至 1920x1080，以便偽裝高畫質。最後，這通常會產生在 960x540 下幾乎同樣清晰的影像。考慮到這一點，這種格式將在 960x540 和 1920x1080 中提供建議。為了妥協，請在 720p 中上傳，先前的 720p 設定適用於此處。該格式需要 8024 公里的位元速率來處理高動作。說話的頭可以安全地降低至 6000 kbps，但 8024 kbps 應該涵蓋大多數情況。這將允許一點點超過半小時。使用 960x540 格式，如果您沒有升頻到更大的尺寸，並且運動不太重，您可以使用與 720p 說話頭相同的 3136 kbps 速率。</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="mobile">行動應用程式的編碼</h2>
+    <p>H.264 是目前行動應用程式的最佳編碼標準。行動裝置支援 H.264 的基準設定檔。除了設備的實際視頻播放功能之外，還考慮網絡條件和它們對下載速度的影響。我們建議您至少在 130 kbps 以下播放一個節目，以便在行動網路上進行可靠的播放。這對於大多數用戶來說應該可靠地執行，同時保持盡可能多的質量。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="aspect">維護外觀比例</h2>
+    <p>Video Cloud 將影片轉碼時，它會維持與來源檔案相同的外觀比例。對於相反的來源檔案 (有時稱為具有非方形像素)，Video Cloud 會偵測並修正這個問題，讓輸出視訊具有正方形像素，以確保在桌上型電腦和行動裝置上正確播放。</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="audio">音訊</h2>
+    <p>對於音訊，我們建議使用 AAC 格式。此外，音軌的持續時間應該與視頻軌道相同-如果它們不匹配，視頻仍然會被攝入，但在某些情況下，您可能會看到播放失敗。</p>
+    <h3>音軌</h3>
+    <p>僅支持一個音軌，除非為您的帳戶啟用了<a href="https://player.support.brightcove.com/general/multiple-audio-tracks.html">多個音軌</a>，在這種情況下，多個音軌將被視為替代音軌。否則，Video Cloud 會使用視訊檔案中的第一個音軌，並略過其他任何音軌。</p>
+    <h3>音訊頻道</h3>
+    <p>支援 1 或 2 個音訊頻道。如果有額外的音頻頻道，它們將被合併為 2-結果往往令人不滿意。</p>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">頁面內容</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  頁面最後更新日期為 10 月 13 日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>布萊特灣支援</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">系統狀態</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">聯絡支援</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">文獻資料</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>訓練</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">線上課程</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">註冊課程</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">布萊特灣大學</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">亮麗</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">聯絡我們</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> 布萊特灣公司版權所有</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">私隱</a> | 條<a href="https://www.brightcove.com/en/terms-and-conditions">款及細則</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <style>
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>
