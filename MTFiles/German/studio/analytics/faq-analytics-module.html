@@ -1,0 +1,1408 @@
+﻿<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>Häufige Fragen: Analytics-Modul</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Video_Cloud_Logo.svg" alt="Produkt-Logo" style="max-height: 100px;max-width: 232px;"/></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">Sprache wählen</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+    
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="Support"/> Kontaktieren Sie Support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="Systemstatus"/> Systemstatus</a></span> <br/>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">Nach Hause</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/analytics/">Überprüfen von Analytics</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Häufige Fragen: Analytics-Modul</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+                              <div class="col-sm-3 left-side-bar">
+        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+          <option value="">ブライトコーブのその他のドキュメント</option>
+          
+            
+              <option value="https://support.brightcove.com">ドキュメントホーム</option>
+            
+          
+            
+              <option value="https://audience.support.brightcove.com">Brightcove Audience</option>
+            
+          
+            
+              <option value="https://beacon.support.brightcove.com">ブライトコーブビーコン</option>
+            
+          
+            
+              <option value="https://campaign.support.brightcove.com">ブライトコーブキャンペーン</option>
+            
+          
+            
+              <option value="https://engage.support.brightcove.com">Brightcove Engage</option>
+            
+          
+            
+              <option value="https://live.support.brightcove.com">ブライトコーブ・ライブ</option>
+            
+          
+            
+              <option value="https://gallery.support.brightcove.com">ブライトコーブギャラリー</option>
+            
+          
+            
+              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+            
+          
+            
+              <option value="https://social.support.brightcove.com">ブライトコーブソーシャル</option>
+            
+          
+            
+              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+            
+          
+            
+              <option value="https://player.support.brightcove.com">ブライトコーブのプレーヤー開発</option>
+            
+          
+            
+              <option value="https://apis.support.brightcove.com">Video CloudプラットフォームAPI</option>
+            
+          
+            
+              <option value="https://sdks.support.brightcove.com">ビデオクラウドデバイス SDK</option>
+            
+          
+            
+              <option value="https://integrations.support.brightcove.com">統合および CMS コネクタ</option>
+            
+          
+            
+              <option value="https://general.support.brightcove.com">ビデオクラウドの一般情報</option>
+            
+          
+            
+              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+            
+          
+        </select>
+
+        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+          <option value="">Autres documents Brightcove</option>
+          
+            
+              <option value="https://support.brightcove.com">Accueil Documentation</option>
+            
+          
+            
+              <option value="https://audience.support.brightcove.com">Audience de Brightcove</option>
+            
+          
+            
+              <option value="https://beacon.support.brightcove.com">Balise Brightcove</option>
+            
+          
+            
+              <option value="https://campaign.support.brightcove.com">Campagne Brightcove</option>
+            
+          
+            
+              <option value="https://engage.support.brightcove.com">Brightcove Engagez</option>
+            
+          
+            
+              <option value="https://live.support.brightcove.com">Brightcove Live</option>
+            
+          
+            
+              <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+            
+          
+            
+              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+            
+          
+            
+              <option value="https://social.support.brightcove.com">Brightcove Social</option>
+            
+          
+            
+              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+            
+          
+            
+              <option value="https://player.support.brightcove.com">Développement du joueur Brightcove</option>
+            
+          
+            
+              <option value="https://apis.support.brightcove.com">API de la plate-forme Video Cloud</option>
+            
+          
+            
+              <option value="https://sdks.support.brightcove.com">SDK pour périphériques Video Cloud</option>
+            
+          
+            
+              <option value="https://integrations.support.brightcove.com">Intégrations et connecteurs CMS</option>
+            
+          
+            
+              <option value="https://general.support.brightcove.com">Informations générales sur Video Cloud</option>
+            
+          
+            
+              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+            
+          
+        </select>
+
+        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+          <option value="">Otros documentos de Brightcove</option>
+          
+            
+              <option value="https://support.brightcove.com">Documentación Inicio</option>
+            
+          
+            
+              <option value="https://audience.support.brightcove.com">Audiencia de Brightcove</option>
+            
+          
+            
+              <option value="https://beacon.support.brightcove.com">Baliza Brightcove</option>
+            
+          
+            
+              <option value="https://campaign.support.brightcove.com">Campaña de Brightcove</option>
+            
+          
+            
+              <option value="https://engage.support.brightcove.com">Brightcove Engage</option>
+            
+          
+            
+              <option value="https://live.support.brightcove.com">Brightcove Live</option>
+            
+          
+            
+              <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+            
+          
+            
+              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+            
+          
+            
+              <option value="https://social.support.brightcove.com">Brightcove Social</option>
+            
+          
+            
+              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+            
+          
+            
+              <option value="https://player.support.brightcove.com">Desarrollo de jugadores de Brightcove</option>
+            
+          
+            
+              <option value="https://apis.support.brightcove.com">API para la plataforma de Video Cloud</option>
+            
+          
+            
+              <option value="https://sdks.support.brightcove.com">SDK de dispositivos de Video Cloud</option>
+            
+          
+            
+              <option value="https://integrations.support.brightcove.com">Integraciones y conectores CMS</option>
+            
+          
+            
+              <option value="https://general.support.brightcove.com">Información general de Video Cloud</option>
+            
+          
+            
+              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+            
+          
+        </select>
+
+        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+          <option value="">Weitere Brightcove Docs</option>
+          
+            
+              <option value="https://support.brightcove.com">Dokumentation Home</option>
+            
+          
+            
+              <option value="https://audience.support.brightcove.com">Brightcove Publikum</option>
+            
+          
+            
+              <option value="https://beacon.support.brightcove.com">Brightcove Leuchtfeuer</option>
+            
+          
+            
+              <option value="https://campaign.support.brightcove.com">Brightcove Kampagne</option>
+            
+          
+            
+              <option value="https://engage.support.brightcove.com">Brightcove Engage</option>
+            
+          
+            
+              <option value="https://live.support.brightcove.com">Brightcove Live</option>
+            
+          
+            
+              <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+            
+          
+            
+              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+            
+          
+            
+              <option value="https://social.support.brightcove.com">Brightcove Social</option>
+            
+          
+            
+              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+            
+          
+            
+              <option value="https://player.support.brightcove.com">Brightcove Spieler-Entwicklung</option>
+            
+          
+            
+              <option value="https://apis.support.brightcove.com">APIs für Video Cloud-Plattform</option>
+            
+          
+            
+              <option value="https://sdks.support.brightcove.com">Videocloud-Geräte-SDKs</option>
+            
+          
+            
+              <option value="https://integrations.support.brightcove.com">Integrationen und CMS-Konnektoren</option>
+            
+          
+            
+              <option value="https://general.support.brightcove.com">Video Cloud — Allgemeine Informationen</option>
+            
+          
+            
+              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+            
+          
+        </select>
+
+        <nav class="sidenav" id="side_nav">
+          
+            
+            <h5><a href="/index.html">Nach Hause</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/index.html">Erste Schritte <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/get-started/getting-started-video-cloud-studio.html">Erste Schritte mit Video Cloud Studio</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/getting-started-your-video-cloud-trial.html">Erste Schritte mit Ihrer Video Cloud-Testversion</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/navigating-brightcove-support-site.html">Navigieren auf der Brightcove Support-Site</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/quick-start-video-cloud.html">Schnellstart zur Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/step-step-video-cloud-studio-publishing-workflow.html">Schritt für Schritt: Video-Cloud-Veröffentlichungs-Workflow</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">Schulung: Einführung in Video Cloud Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud.html">Schulung: Einführung in Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-video-cloud-basics.html">Schulung: Videocloud-Grundlagen</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/video-cloud-glossary.html">Video Cloud-Glossar</a></li>
+                  
+                
+                  
+                    <li><a href="/training/video-cloud-studio-training-videos.html">Video Cloud Studio-Schulungsvideos</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/basics/index.html">Lerne die Grundlagen <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-activating-and-deactivating-video.html">Aktivieren und Deaktivieren eines Videos</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-adding-user-video-cloud-account.html">Hinzufügen eines Benutzers zu einem Video Cloud-Konto</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html">Aufnehmen von Videoplakats und Thumbnail-Bildern</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-manual-playlist.html">Erstellen einer manuellen Playlist</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-player.html">Einen Spieler erstellen</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-playlist-player.html">Erstellen eines Playlist-Players</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-smart-playlist.html">Erstellen einer intelligenten Playlist</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-determining-how-much-video-being-watched.html">Bestimmen, wie viel von einem Video angesehen wird</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-determining-which-videos-have-most-views.html">Bestimmen, welche Videos die meisten Aufrufe haben</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-editing-basic-video-properties.html">Bearbeiten von grundlegenden Videoeigenschaften</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-editing-video-properties-multiple-videos.html">Bearbeiten von Videoeigenschaften für mehrere Videos</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-organizing-videos-using-folders.html">Organisieren von Videos mithilfe von Ordnern</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-publishing-playlist-web.html">Veröffentlichen einer Playlist im Web</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-publishing-single-video-web.html">Veröffentlichen eines einzelnen Videos im Web</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-styling-player.html">Einen Spieler gestalten</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html">Hochladen von Videoplakats und Thumbnail-Bildern</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-uploading-videos.html">Videos werden hochgeladen</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-viewing-brightcove-system-status-page.html">Anzeigen der Seite „Systemstatus von Brightcove“</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/general/index.html">Allgemeine Informationen <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/general/adding-facebook-button-brightcove-player.html">Einen Facebook-Like Button zu einem Spieler hinzufügen</a></li>
+                  
+                
+                  
+                    <li><a href="/general/best-practices-video-creating-transcoding-and-uploading-workflow.html">Best Practices: Transcoding und Hochladen</a></li>
+                  
+                
+                  
+                    <li><a href="/general/content-delivery-options.html">Optionen zur Inhaltsbereitstellung</a></li>
+                  
+                
+                  
+                    <li><a href="/general/creating-audio-only-renditions-low-bandwidth-delivery.html">Erstellen von reinen Audio-Formatvarianten</a></li>
+                  
+                
+                  
+                    <li><a href="/general/domains-and-ports-must-be-accessible-video-cloud.html">Domains und Ports, die zugänglich sein müssen</a></li>
+                  
+                
+                  
+                    <li><a href="/general/drm-output-protection-settings.html">Einstellungen für DRM-Ausgabeschutz</a></li>
+                  
+                
+                  
+                    <li><a href="/general/enabling-longer-videos-youtube.html">Aktivieren längerer Videos auf YouTube</a></li>
+                  
+                
+                  
+                    <li><a href="/general/making-your-video-content-indexable.html">Ihre Videoinhalte indexierbar machen</a></li>
+                  
+                
+                  
+                    <li><a href="/general/optimal-video-dimensions.html">Optimale Videomaße</a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-context-aware-encoding.html">Überblick über Context Aware Codierung</a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-digital-rights-management-drm-video-cloud.html">Übersicht: Digitales Rechtemanagement (DRM)</a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-dynamic-delivery.html">Überblick über die dynamische Lieferung</a></li>
+                  
+                
+                  
+                    <li><a href="/general/protecting-videos-hls-encryption.html">Schützen von Videos mit HLS-Verschlüsselung</a></li>
+                  
+                
+                  
+                    <li><a href="/general/resetting-your-studio-password.html">Zurücksetzen Ihres Studiopassworts</a></li>
+                  
+                
+                  
+                    <li><a href="/general/sharing-videos-twitter-player-cards.html">Videos mit Twitter Player-Karten teilen</a></li>
+                  
+                
+                  
+                    <li><a href="/general/studio-system-requirements.html">Studio-Systemanforderungen</a></li>
+                  
+                
+                  
+                    <li><a href="/general/supported-video-and-audio-formats-codecs-and-containers.html">Unterstützte Video- und Audioformate</a></li>
+                  
+                
+                  
+                    <li><a href="/general/tls-media-player-and-api-urls.html">TLS für Medien-, Player- und API-URLs</a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-cloud-architecture-overview.html">Überblick über die Videocloud-Architektur</a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-cloud-studio-cookies.html">Videocloud-Studio-Cookies</a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-source-file-specifications-and-recommendations.html">Spezifikationen und Empfehlungen für Videoquelldateien</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-360deg-videos.html">Arbeiten mit 360° Videos</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-audio-content.html">Arbeiten mit reinen Audio-Inhalten</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-multiple-video-cloud-accounts.html">Arbeiten mit mehreren Konten</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/media/index.html">Verwalten von Videos <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/media/adding-audio-tracks-videos-using-media-module.html">Hinzufügen von Audiospuren zu Videos</a></li>
+                  
+                
+                  
+                    <li><a href="/media/adding-captions-videos-using-media-module.html">Hinzufügen von Untertiteln zu Videos</a></li>
+                  
+                
+                  
+                    <li><a href="/media/adding-chapters-video.html">Hinzufügen von Kapiteln zu einem Video</a></li>
+                  
+                
+                  
+                    <li><a href="/media/capturing-poster-and-thumbnail-images.html">Aufnehmen von Poster- und Thumbnail-Bildern</a></li>
+                  
+                
+                  
+                    <li><a href="/media/configuring-video-availability.html">Konfigurieren der Videoverfügbarkeit</a></li>
+                  
+                
+                  
+                    <li><a href="/media/creating-and-managing-playlists.html">Erstellen und Verwalten von Playlists</a></li>
+                  
+                
+                  
+                    <li><a href="/media/downloading-videos-video-cloud.html">Herunterladen von Videos aus Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/media/editing-video-properties-using-media-module.html">Bearbeiten von Videoeigenschaften</a></li>
+                  
+                
+                  
+                    <li><a href="/media/editing-video-properties-using-quick-edit.html">Bearbeiten von Eigenschaften mit Quick Edit</a></li>
+                  
+                
+                  
+                    <li><a href="/media/exporting-video-data.html">Exportieren von Videodaten</a></li>
+                  
+                
+                  
+                    <li><a href="/media/getting-started-media-module.html">Erste Schritte mit dem Medienmodul</a></li>
+                  
+                
+                  
+                    <li><a href="/media/how-search-videos-and-playlists-media-module.html">So suchen Sie nach Videos und Playlists</a></li>
+                  
+                
+                  
+                    <li><a href="/media/increasing-quality-poster-and-thumbnail-images.html">Die Qualität von Posterbildern erhöhen</a></li>
+                  
+                
+                  
+                    <li><a href="/media/introduction-playlists.html">Einführung in Playlists</a></li>
+                  
+                
+                  
+                    <li><a href="/media/media-sharing-using-media-module.html">Teilen von Medien</a></li>
+                  
+                
+                  
+                    <li><a href="/media/organizing-videos-using-folders.html">Organisieren von Videos mithilfe von Ordnern</a></li>
+                  
+                
+                  
+                    <li><a href="/media/overview-adding-captions-video.html">Übersicht: Hinzufügen von Untertiteln zu einem Video</a></li>
+                  
+                
+                  
+                    <li><a href="/media/replacing-video-source-file.html">Ersetzen einer Videoquelldatei</a></li>
+                  
+                
+                  
+                    <li><a href="/media/retranscoding-videos-using-media-module.html">Retranscodierungsvideos</a></li>
+                  
+                
+                  
+                    <li><a href="/media/setting-required-fields-videos.html">Einstellen erforderlicher Felder</a></li>
+                  
+                
+                  
+                    <li><a href="/media/styling-captions.html">Stiling Bildunterschriften</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-poster-and-thumbnail-images.html">Hochladen von Poster- und Thumbnail-Bildern</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-videos-using-upload-module.html">Videos werden hochgeladen</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-videos-remote-urls.html">Videos hochladen Remote-URLs</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-cue-points-media-module.html">Arbeiten mit Cue-Points</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-multi-lingual-metadata.html">Arbeiten mit mehrsprachigen Metadaten</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-remote-asset-videos.html">Arbeiten mit Remote-Asset-Videos</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">Verwalten von Cloud-Playout-Kanälen <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">Übersicht: Cloud-Playout</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">Erstellen eines Cloud-Playout-Kanals</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">Verwenden von Kanalaktionen</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">Cloud-Playout monetarisieren</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">Generieren des Channel Embed Codes</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">Anzeigen der Kanalausgabe und -analyse</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/players/index.html">Spieler verwalten <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">Thumbnail Seeking hinzufügen</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">Konfigurieren eines Player-Overlays</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-adobe-analytics-event-tracking.html">Konfigurieren von Ereignisverfolgung durch A</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-google-analytics-event-tracking.html">Konfigurieren von Google Analytics Event Tracking</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-advertising-using-players-module.html">Konfigurieren von Player-Werbung</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-content-restrictions.html">Konfigurieren von Player-Inhaltsbeschränkungen</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-controls.html">Konfigurieren von Player-S</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-endscreen.html">Konfigurieren des Player-Endscreens</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-localization.html">Konfigurieren der Player-Lokalisierung</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-playback-properties.html">Konfigurieren von Player-Wiedergabeeigenschaften</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-plugins.html">Konfigurieren von Player-Plugins</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-social-properties-player.html">Konfigurieren der Social Properties</a></li>
+                  
+                
+                  
+                    <li><a href="/players/generating-player-embed-code.html">Erstellen von Einbettungscode für Spieler</a></li>
+                  
+                
+                  
+                    <li><a href="/players/getting-started-players-module.html">Erste Schritte mit dem Spieler-Modul</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-information-properties.html">Festlegen von Eigenschaften für Spieler</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-properties.html">Festlegen von Player-</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-update-mode-and-version.html">Einstellen des Player-Aktualisierungsmodus</a></li>
+                  
+                
+                  
+                    <li><a href="/players/styling-players.html">Styling-Spieler</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/publish/index.html">Veröffentlichen von Videos &amp; Spielern <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/publish/adding-3play-media-interactive-transcript-video.html">Hinzufügen eines interaktiven 3Play Media Transcript</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/adding-application-id-player-embed-code.html">Hinzufügen einer Anwendungs-ID zum Einbettungscode</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/adding-brightcove-player-facebook-fan-page.html">Einen Spieler zu einer Facebook-Fanpage hinzufügen</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/changing-video-player-without-changing-embed-code.html">Ändern eines Videos in einem Player</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/choosing-correct-embed-code.html">Auswahl des richtigen Einbettungscodes</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/creating-and-publishing-high-quality-screencasts.html">Erstellen und Veröffentlichen von hochwertigen Screencasts</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/deep-linking.html">Deep Linking</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/driving-video-views-through-email.html">Videoaufrufe per E-Mail</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/dynamically-assigning-videos-player.html">Dynamisches Zuweisen von Videos zu einem Spieler</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/embedding-brightcove-player-google-sites-page.html">Einbetten eines Spielers auf einer Google-Websites-Seite</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-player-wordpress-page.html">Veröffentlichen eines Spielers auf einer Wordpress-Seite</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-players-facebook-instant-articles.html">Veröffentlichen von Spielern in Facebook Instant Ar</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Spieler in Joomla veröffentlichen</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-video-email.html">Veröffentlichen eines Videos per E-Mail</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-videos-and-playlists-media-module.html">Veröffentlichen von Videos und Playlists</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-videos-page-experience.html">Veröffentlichen von Videos zu einem In-Page-Erlebnis</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/step-step-using-players-module-create-and-publish-player.html">Schritt für Schritt: Erstellen und Veröffentlichen eines Spielers</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/using-multiple-players-one-page.html">Verwendung mehrerer Spieler auf einer Seite</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/using-reference-ids.html">Verwenden von Referenznummern</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/analytics/index.html">Überprüfen von Analytics <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/analytics/analytics-module-ui-glossary.html">Glossar zur Benutzeroberfläche des Analytics-Modul</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/analytics-report-reference.html">Analytics-Bericht Referenz</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/calculating-video-engagement-score.html">Berechnen des Video-Interaktions-Score</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/creating-custom-analytics-reports.html">Erstellen von benutzerdefinierten Analytics-Ber</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/engagement-report-reference.html">Referenz für Interaktionsberichte</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/exporting-data-analytics-module.html">Exportieren von Daten</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/faq-analytics-module.html">FAQ: Analytics-Modul</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/getting-started-analytics-module.html">Erste Schritte mit dem Analytics-Modul</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/how-search-videos-analytics-module.html">So suchen Sie nach Videos</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/managing-scheduled-reports.html">Verwalten von geplanten Berichten</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/performance-report-reference.html">Referenz zu Leistungsberichten</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Überprüfen von Spielereignissen in Google Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">Referenz zum Bericht „Jetzt Trends“</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/index.html">Konten verwalten <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/admin/authenticating-studio-users-using-single-sign.html">Authentifizieren von Studio-Benutzern mit SSO</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/configuring-language-settings.html">Konfigurieren von Spracheinstellungen</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/configuring-server-side-ad-settings.html">Konfigurieren der serverseitigen Anzeigeneinstellungen</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-custom-metadata-fields.html">Erstellen von benutzerdefinierten Metadatenfel</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-ingest-profiles-context-aware-encoding.html">Erstellen von Aufgaufriefiles für kontextbezogenes</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-ingest-profiles-dynamic-delivery.html">Erstellen von Aufgabe-Profilen für die dynamische Bereitstellung</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/ingest-profiles-best-practices.html">Best Practices für Profile aufnehmen</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-account-information.html">Verwalten von Kontoinformationen</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-account-settings.html">Verwalten von Kontoeinstellungen</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-api-authentication-credentials.html">Verwalten von Anmeldedaten für API-</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-ingest-profiles.html">Verwalten von Ingest-Profilen</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-media-sharing-settings.html">Verwalten von Einstellungen für die gemeinsame Nutzung</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-profile-information.html">Verwalten von Profilinformationen</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard-Ingest-Profile (DD &amp; CAE)</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-users.html">Benutzer verwalten</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/using-directed-migration-tool-migrate-brightcove-smart-players.html">Verwenden des Directed Migration Tools</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/viewing-billing-information.html">Anzeigen von Rechnungsinformationen</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/training/index.html">Schulung <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/training/online-training-courses.html">Alle Online-Schulungen</a></li>
+                  
+                
+                  
+                    <li><a href="/training/register-training.html">Registrieren Sie sich für Schulungen mit Kursleiter</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud.html">Schulung: Einführung in Video Cloud</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">Schulung: Einführung in Video Cloud Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-video-cloud-basics.html">Schulung: Videocloud-Grundlagen</a></li>
+                  
+                
+                  
+                    <li><a href="/training/video-cloud-studio-training-videos.html">Video Cloud Studio-Schulungsvideos</a></li>
+                  
+                
+                  
+                    <li><a href="/training/brightcove-university.html">Schulungskurse der Brightcove University</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/index.html">Versionsinformationen <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/release-notes/video-cloud-studio-release-notes.html">Video Cloud Studio Versionshinweise</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/index.html">unterstützung <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/brightcove-answer.html">Brightcove Antworten</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Anzeigen der Seite „Systemstatus von Brightcove“</a></li>
+                  
+                
+                  
+                    <li><a href="/support/contact-sales.html">Kontakt mit dem Vertrieb</a></li>
+                  
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Einen Supportfall öffnen</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="Menü „Navigation"/></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Inhalt der Seite</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="in neuem Tab öffnen" style="margin-top:4em;width: 1.5em;"/></a>
+
+
+
+  
+    
+
+
+<article class="bcls-article">
+  <h1>Häufige Fragen: Analytics-Modul</h1>
+  <summary>Hier finden Sie Antworten auf häufige Fragen zum Analytics-Modul von Video Cloud Studio. Weitere Informationen über das Analytics-Modul erhalten Sie unter <a href="/analytics/getting-started-analytics-module.html">Erste Schritte mit dem Analytics-Modul</a>.</summary>
+  <section class="bcls-section">
+    <h2 id="1">1. Was ist das Analytics-Modul?</h2>
+    <p>Das Analytics-Modul von Video Cloud Studio ist eine Benutzeroberfläche zum Anzeigen echtzeitnaher Analytics-Informationen zu Ihren Videos und Playern. Die Analytics-Plattform nutzt die neuesten Innovationen der Big-Data-Technologie und ist für umfangreiche Datenmengen konzipiert. Die Analyseplattform bietet schnellen, nahezu Echtzeitzugriff auf Analysedaten und enthält eine leistungsstarke offene API, mit der Entwickler zusätzlich zu den in Video Cloud Studio enthaltenen benutzerdefinierten Analyselösungen und -berichten erstellen können.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="2">2. Können Berichtdaten aus dem Analytics-Modul exportiert werden?</h2>
+    <p>Ja. Die Analytics-Berichte enthalten einen Link, mit dem Sie die Berichtdaten in einer CSV- oder XLSX-Datei herunterladen können.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="3">3. Wie oft werden die Daten im Analysemodul aktualisiert?</h2>
+    <p>Normalerweise verzögern sich die Echtzeitdaten um ungefähr 15 Minuten. Diese Zeit kann jedoch abhängig von der Datenmenge variieren, die derzeit vom Datenerfassungssystem empfangen wird, und in einigen Fällen kann die Verzögerung bis zu 3 Stunden betragen.</p>
+    <p>Beachten Sie, dass das Analytics-System Daten aus mehreren Quellen zusammenstellt und Echtzeitdaten eine Annäherung sind, die auf den bisher gesammelten Daten basiert. Die Zahlen können von Bericht zu Bericht unterschiedlich sein und sollten eher als Trends als als harte Zahlen angesehen werden.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="4">4. Besteht die Möglichkeit, interne Video-IDs in die Berichte oder die API einzubinden?</h2>
+    <p>Ein Feld namens „Reference ID“ ist als Video-Eigenschaft verfügbar, mit der Sie Videos in Video Cloud Ihre interne ID zuordnen können. Das Feld „Reference ID“ kann angezeigt werden, wenn Sie einen benutzerdefinierten Bericht erstellen. Weitere Informationen über das Erstellen benutzerdefinierter Berichte finden Sie unter <a href="/analytics/creating-custom-analytics-reports.html">Erstellen von benutzerdefinierten Analytics-Berichten im Analytics-Modul</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="5">5. Was geschieht, wenn ein Zuschauer eine Preroll-Anzeige vor einem Video ein paar Sekunden lang anschaut und dann abbricht. Wird eine Video-Ansicht gezählt, wenn der Zuschauer den Hauptinhalt überhaupt nicht angesehen hat?</h2>
+    <p>Eine Video-Ansicht wird nur gezählt, nachdem die Wiedergabe des Hauptinhalts gestartet wurde.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="6">6. Ist es möglich, IP-Adressbereiche aus Analytics herauszufiltern?</h2>
+    <p>Eine Funktion zum Herausfiltern von IP-Adressbereichen ist gegenwärtig nicht verfügbar.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="7">7. Werden bei der Analytics-Auswertung Player verfolgt, die Live-Veranstaltungen streamen?</h2>
+    <p>Analytics zeichnet im Rahmen des Leistungsberichts die Aufrufdauer in Minuten auf. Die Live-Anzeigedauer in Sekunden kann beim Erstellen von benutzerdefinierten Berichten oder mit dem Modul Billing angezeigt werden. Die Bandbreite für Live-Veranstaltungen wird nicht angezeigt.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="8">8. Wie kann ich im Analytics-Modul nach Informationen zu einem bestimmten Video suchen?</h2>
+    <p>Verwenden Sie die Suchfunktion, um ein bestimmtes Video zu finden. Die Felder mit dem Video-Namen, der Kurzbeschreibung, der langen Beschreibung, den Tags, der Video-ID, der Referenz-ID und alle vorhandenen benutzerdefinierten Textfelder werden durchsucht. Durch Klicken auf ein Ergebnis wird die Leistung oder Bindung zu diesem Video angezeigt. Benutzerdefinierte Berichte können auch erstellt werden, um Analytics für eine bestimmte Video-ID anzuzeigen.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="9">9. Kann ich im Analytics-Modul anhand der Referenz-ID nach einem bestimmten Video suchen?</h2>
+    <p>Ja. Verwenden Sie die Suchfunktion, um basierend auf dem Feld „Reference ID“ ein bestimmtes Video zu finden. Die Felder mit dem Video-Namen, der Kurzbeschreibung, der langen Beschreibung, den Tags, der Video-ID und alle vorhandenen benutzerdefinierten Textfelder werden ebenfalls durchsucht.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="10">10. Wie können Berichte über Kundenbindung und Abbruchraten für ein bestimmtes Video erstellt werden?</h2>
+    <p>Der Bindungsbericht enthält diese Informationen. Wenn Sie den Bindungsbericht und dann die Video-Dimension auswählen, sehen Sie ein Diagramm, das die gesamte Bindung für Ihr Konto zeigt. Bei Auswahl eines Videos erscheint ein Diagramm, das die Bindung für dieses Video im Zeitverlauf darstellt.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="11">11. Können Berichte für eine URL erstellt werden? Angenommen, wir hosten ein Video auf Seite A und Seite B. Können wir die Leistung der zwei Platzierungen vergleichen?</h2>
+    <p>Ja. Der Leistungsbericht bietet die Möglichkeit zum Anzeigen von Video-Daten nach der Ausgangsdomäne.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="12">12. Wird ein Video, das in einer Schleife abgespielt wird, als einzelne Video-Ansicht gezählt, oder wird jedes erneute Abspielen zusätzlich gezählt?</h2>
+    <p>Video-Ansichten werden pro Ansichtssitzung beim Start des Streams aufgezeichnet. Notiere dass der <strong>Ansichten bei x%</strong> im Engagement Report ist nicht dasselbe wie a <strong>Videoansicht</strong> im Leistungsbericht. Eine Video-Ansicht wird gezählt, wenn die Video-Wiedergabe gestartet wird. Die Ansichten bei 1 % werden aufgezeichnet, sobald das erste Prozent angesehen wurde. Der Unterschied besteht darin, dass, wenn das erste Prozent mehrfach angesehen wird (wenn das Video zum Beispiel auf automatische Wiedergabe eingestellt ist), die Anzahl steigt, während eine Videoansicht gezählt wird, wenn das Video zum ersten Mal wiedergegeben wird, aber nicht auf eine Wiederholung gezählt wird (es sei denn, der Benutzer lädt die Seite neu oder sieht ein anderes Video in die Wiedergabeliste usw.).</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="13">13. Kann ich für mein Konto einen Bericht ausführen, der die Anzahl der einzelnen Betrachter aufzeigt?</h2>
+    <p>Sie finden die Anzahl der einzelnen Betrachter im Leistungsbericht.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="14">14. Sind die Standardberichte im Analytics-Modul anpassbar?</h2>
+    <p>Die Daten im Leistungs- und Video-Bindungsbericht sind nicht anpassbar. Allerdings ermöglicht das Analytics-Modul das Erstellen von benutzerdefinierten Analytics-Berichten, deren Daten von Ihnen auswählbar sind. Es gibt auch eine <span translate="No">Analytics API</span> Hiermit kann programmgesteuert auf die Analysedaten zugegriffen werden.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="15">15. Weshalb sind einige Bindungsergebnisse sehr hoch (höher als 100)?</h2>
+    <p>Das Bindungsergebnis kann höher als 100 sein. Scrubbing und erneutes Anzeigen eines Videos löst keine neuen video_view-Ereignisse aus, die Bindung (video_engagement) wird jedoch aufgezeichnet. Beispiel: Ein Video wird in einem einzelnen Video-Player auf einer Seite abgespielt. Die folgenden Ereignisse zeigen, auf welche Weise die Video-Bindung stark variieren kann:</p>
+    <ol>
+      <li>Noch nicht angesehen. Bindungsergebnis: 0.</li>
+      <li>Ein Besucher lädt die Seite und sieht sich das Video vollständig an. Bindungsergebnis: 100 (100 Prozent angesehen/1 Ansicht).</li>
+      <li>Derselbe Besucher scrubt zurück und sieht sich das Video noch einmal vollständig an (der Browser wurde nicht neu geladen). Bindungsergebnis: 200 (200 Prozent angesehen/1 Ansicht).</li>
+      <li>Ein weiterer Besucher lädt die Seite und sieht sich das Video vollständig an. Bindungsergebnis: 150 (300 Prozent angesehen/2 Ansichten).</li>
+    </ol>
+    <p>Weitere Details über die Berechnung der Video-Bindung finden Sie im Trainings-Video <a href="/analytics/calculating-video-engagement-score.html">Berechnen der Video-Bindung</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="16">16. Weshalb ist der Wert für Ansichten bei 25 % höher als der Wert für Ansichten bei 1 %?</h2>
+    <p>Mehrere Faktoren können hierbei eine Rolle spielen:</p>
+    <ul>
+      <li>Ansichten bei 1 % und Ansichten bei x % sind zwei verschiedene Messgrößen. Als Ansichten bei 1 % werden nur einzelne Aufrufe gezählt; der Wert berücksichtigt weder ein Zurückspulen noch ein erneutes Abspielen eines Videos. Spielt ein Zuschauer das Video erneut ab oder spult er es zu einer bestimmten Stelle zurück, erhöht sich der Zielgruppenprozentwert, jedoch nicht die Anzahl der Video-Aufrufe.</li>
+      <li>Die Kurve für Ansichten bei x % und Bindung enthält tägliche UTC-Zeitwerte, weshalb zu einem bestimmten Datum unter Umständen Daten für zwei Tage vorhanden sein können, falls sich der UTC-Zeitwert und die Zeitzone, aus der die Werte stammen, überschneiden.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="17">17. Warum ändert sich die Anzahl der Video-Ansichten eines bestimmten Tages im Laufe der Zeit?</h2>
+    <p>Das Analytics-System stellt stündlich erfasste Daten bereit, die noch nicht abgeglichen sind, und kombiniert sie mit den täglich erfassten Daten. Diese Kombination erfolgt so bald wie möglich, normalerweise innerhalb von 3 bis 5 Tagen. Stündlich erfasste Daten werden niemals sofort mit den anderen Daten kombiniert. Da stündliche Daten für Publisher sehr informativ sind, stehen die stündlich erfassten, nicht sofort mit den anderen Daten kombinierten Daten 32 Tage lang zur Verfügung. Weitere Einzelheiten zu diesem Abgleichvorgang:</p>
+    <ul>
+      <li>Player senden Daten an die Data Collection API.</li>
+      <li><span id="1422467412848S" style="display: none;">&nbsp;</span>Die Datenerfassungs-API versucht nach besten Kräften, in die Echtzeitdatenbank zu schreiben&nbsp;UND es schreibt die Ereignisse in den Protokollspeicher</li>
+      <li>Wenn wir zusätzliche Daten von CDNs und anderen Quellen sammeln, werden die Analysedaten aktualisiert. Dies ist der Versöhnungsprozess</li>
+      <li>Ein nächtlich aktiviertes Batchsystem liest die rohen Protokollereignisse und erstellt historische Datenimportdateien.</li>
+      <li>Die Datenimportdateien werden in die historische Datenbank geladen. Beim Durchführen eines API-Aufrufs bestimmen Sie, ob Sie mit dem Parameter „Reconciled" nur kombinierte Daten (am genauesten) oder kombinierte und nicht kombinierte Daten anzeigen möchten. Weitere Informationen finden Sie im Dokument <a href="https://apis.support.brightcove.com/analytics/getting-started/overview-analytics-api-v1.html">Analytics API Overview</a>.</li>
+      <li>Alle historischen Daten werden kombiniert, Echtzeitdaten (32 Tage lang verfügbar) wurden möglicherweise bereits kombiniert. Wenn der Zeitraum, für den Sie Daten abrufen, vor mehr als 32 Tagen endet, müssen Sie den nicht verwenden <code translate="No">reconciled data, since the data will all be historical.</code></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="18">18. Warum ergeben manche Messungen den Wert Null oder keinen Wert?</h2>
+    <p>Dies ist der Fall, wenn für den angeforderten Zeitraum keine Kennzahlen verfügbar sind. Einige Kennzahlen besitzen eine Latenz von 2 bis 3 Tagen. Wenn Sie also beispielsweise diese Daten für die letzten 30 Tage (einschließlich heute) angefragt haben, ergeben diese Kennzahlen Null, da der angeforderte Bereich Tage enthält, für die diese Daten noch nicht vorliegen. Um dies beim Anfordern von Daten zu vermeiden, vergewissern Sie sich, dass der angeforderte Bereich außerhalb der Latenzperiode liegt.</p>
+    <p>Wir haben auch weitere Kennzahl-Dimension-Kombinationen zu bestimmten Zeiträumen hinzugefügt. Beispiel: Wenn Sie einen Mehrjahresbericht ausführen, bleiben möglicherweise einige Kennzahlen leer oder unvollständig, weil wir diese Kennzahlen nicht für den gesamten Berichtzeitraum aufgezeichnet haben. Weitere Informationen über gültige Datum-Dimension-Kombinationen finden Sie im Dokument <a href="https://apis.support.brightcove.com/analytics/getting-started/overview-analytics-api-v1.html">Analytics API Overview</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="19">19. Weshalb stimmen die Zieldomänendaten von 2013 nicht mit anderen Leistungsdaten überein?</h2>
+    <p>Die Zieldomänenfunktion wurde erst im Januar 2014 aktiviert. Die Daten vom März 2013 bis Januar 2014 wurden teilweise angegeben, allerdings ist für diesen Zeitraum nur ein Teil der Zieldaten verfügbar. Die Daten ab Januar 2014 sind vollständig.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="20">20. Sind Analytics-Daten für gelöschte Videos enthalten?</h2>
+    <p>Analytics-Berichte enthalten Analytics für Videos, die aus Ihrem Konto gelöscht wurden. Sie können jedoch nicht nach gelöschten Videos im Analytics-Modul suchen, um zu einem bestimmten gelöschten Video einen Bericht anzuzeigen. Zum Erstellen eines solchen Berichts, benötigen Sie die Video-ID des gelöschten Videos, und Sie müssen die <a href="https://apis.support.brightcove.com/analytics/">Analytics-API</a> verwenden. Beachten Sie, dass beim Exportieren von Berichtsdaten möglicherweise Daten für gelöschte Videos angezeigt werden, ohne dass eine Video-ID oder ein Name angezeigt wird.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="21">21. Kann ich aus den Analytics-Berichten Mitarbeiteransichten ausschließen?</h2>
+    <p>Hierzu gibt es keine einfache Lösung. Und bei Videos, auf die sehr viel zugegriffen wird, machen Mitarbeiterzugriffe wahrscheinlich nur einen kleinen Prozentanteil aus, weshalb die Auswirkungen auf die Analytics-Daten vernachlässigbar sind. Wenn Sie dies bei Videos, die nicht viele Zugriffe verzeichnen, für wichtig erachten, duplizieren Sie am besten die Produktions-Player, und bitten Sie die Mitarbeiter, Videos mit den Player-Kopien zu testen/anzuzeigen. Verwenden Sie anschließend Filter, um mit der Funktion „Custom Reports“ im Analytics-Modul oder der Analytics-API Berichte zu Ihren Produktions-Playern zu erstellen.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="22">22. Warum sehe ich nicht immer ganze Zahlen für Engagement?</h2>
+    <p>Es ist möglich, dass Interaktionszahlen mit Dezimalstellen zurückkehren. Der Grund dafür ist, dass das Engagement normalisiert ist, was bedeutet, dass es sich um ein Verhältnis von „video_percent_viewed * (video_engagement_25/video_engagement_sum)“ handelt. Basierend auf dem für die Abfrage ausgewählten Zeitraum können Sie Gleitkommazahlen in Fällen sehen, in denen sie sich nicht genau teilen.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="23">23. Warum zeigen einige Berichte nur die Video-ID an oder warum werden einige Videos überhaupt nicht angezeigt?</h2>
+    <p>Wenn während eines Zeitraums keine Ansichten für ein Video vorhanden sind, enthält der Bericht keine umfangreichen Daten (z. B. nur die Video-ID und sonst nichts). Wenn überhaupt keine Daten heruntergeladen werden (dh nicht einmal Bilddaten), wird das Video nicht im Bericht angezeigt.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="24">24. Wann kann ich frühestens Analysedaten abrufen?</h2>
+    <p>Das früheste Datum für Analysedaten ist der 28. Dezember 2010. Einige Datenelemente wurden erst später erfasst, sodass das früheste Datum, an dem Sie Daten sehen können, genau davon abhängt, was Sie sich ansehen. Videoansichten sind bis zum 28. Dezember 2010 verfügbar.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="25">25. Sollte das Analytics-Modul und das <span translate="No">Analytics API</span> Gib mir identische Daten für den gleichen Zeitraum?</h2>
+    <p>Ja, aber sie können unterschiedlich sein, wenn Sie Daten vergleichen, die relativ neu sind, und Sie Daten von Studio und der API zu verschiedenen Zeiten erhalten:</p>
+    <ol>
+      <li>Die Daten sind weniger als 3 Tage alt. Analysedaten, die weniger als 3 Tage alt sind, sind vorläufig und können jederzeit geändert werden.</li>
+      <li>Die Daten für denselben Zeitraum werden mit weniger als 32 Tagen und nach ihrem Alter von 32 Tagen untersucht. Nach 32 Tagen werden die Daten in ein separates „historisches“ Repository verschoben, und zu diesem Zeitpunkt verwerfen wir einige Daten, insbesondere detaillierte Interaktionsdaten. Dies bedeutet, dass sich berechnete Felder wie die Engagement-Score geringfügig ändern können, da die Berechnung für weniger granulare Daten erfolgt.</li>
+    </ol>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Inhalt der Seite</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Seite zuletzt aktualisiert am 06. November 2020
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Brightcove Support-Service</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">Systemstatus</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Kontakt mit dem Support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">DOKUMENTATION</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Schulungen</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">Online-Kurse</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">Für einen Kurs anmelden</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">Brightcove Universität</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Kontaktiere uns</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. Alle Rechte vorbehalten.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Allgemeine Geschäftsbedingungen</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <style>
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,1656 @@
+﻿<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="このトピックでは、動的配信およびコンテキスト認識エンコーディングを使用するときに提供される標準インジェストプロファイルのプロパティについて説明します。">
+  
+  <title>動的配信およびコンテキスト認識エンコーディングの標準インジェストプロファイル</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Video_Cloud_Logo.svg" alt="製品ロゴ" style="max-height: 100px;max-width: 232px;"/></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">言語の選択</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+    
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="サポート"/> サポートへのお問い合わせ</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="システムステータス"/> システムステータス</a></span> <br/>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">ホーム</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/admin/">アカウントの管理</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">動的配信およびコンテキスト認識エンコーディングの標準インジェストプロファイル</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+                              <div class="col-sm-3 left-side-bar">
+        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+          <option value="">ブライトコーブのその他のドキュメント</option>
+          
+            
+              <option value="https://support.brightcove.com">ドキュメントホーム</option>
+            
+          
+            
+              <option value="https://audience.support.brightcove.com">Brightcove Audience</option>
+            
+          
+            
+              <option value="https://beacon.support.brightcove.com">ブライトコーブビーコン</option>
+            
+          
+            
+              <option value="https://campaign.support.brightcove.com">ブライトコーブキャンペーン</option>
+            
+          
+            
+              <option value="https://engage.support.brightcove.com">Brightcove Engage</option>
+            
+          
+            
+              <option value="https://live.support.brightcove.com">ブライトコーブ・ライブ</option>
+            
+          
+            
+              <option value="https://gallery.support.brightcove.com">ブライトコーブギャラリー</option>
+            
+          
+            
+              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+            
+          
+            
+              <option value="https://social.support.brightcove.com">ブライトコーブソーシャル</option>
+            
+          
+            
+              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+            
+          
+            
+              <option value="https://player.support.brightcove.com">ブライトコーブのプレーヤー開発</option>
+            
+          
+            
+              <option value="https://apis.support.brightcove.com">Video CloudプラットフォームAPI</option>
+            
+          
+            
+              <option value="https://sdks.support.brightcove.com">ビデオクラウドデバイス SDK</option>
+            
+          
+            
+              <option value="https://integrations.support.brightcove.com">統合および CMS コネクタ</option>
+            
+          
+            
+              <option value="https://general.support.brightcove.com">ビデオクラウドの一般情報</option>
+            
+          
+            
+              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+            
+          
+        </select>
+
+        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+          <option value="">Autres documents Brightcove</option>
+          
+            
+              <option value="https://support.brightcove.com">Accueil Documentation</option>
+            
+          
+            
+              <option value="https://audience.support.brightcove.com">Audience de Brightcove</option>
+            
+          
+            
+              <option value="https://beacon.support.brightcove.com">Balise Brightcove</option>
+            
+          
+            
+              <option value="https://campaign.support.brightcove.com">Campagne Brightcove</option>
+            
+          
+            
+              <option value="https://engage.support.brightcove.com">Brightcove Engagez</option>
+            
+          
+            
+              <option value="https://live.support.brightcove.com">Brightcove Live</option>
+            
+          
+            
+              <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+            
+          
+            
+              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+            
+          
+            
+              <option value="https://social.support.brightcove.com">Brightcove Social</option>
+            
+          
+            
+              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+            
+          
+            
+              <option value="https://player.support.brightcove.com">Développement du joueur Brightcove</option>
+            
+          
+            
+              <option value="https://apis.support.brightcove.com">API de la plate-forme Video Cloud</option>
+            
+          
+            
+              <option value="https://sdks.support.brightcove.com">SDK pour périphériques Video Cloud</option>
+            
+          
+            
+              <option value="https://integrations.support.brightcove.com">Intégrations et connecteurs CMS</option>
+            
+          
+            
+              <option value="https://general.support.brightcove.com">Informations générales sur Video Cloud</option>
+            
+          
+            
+              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+            
+          
+        </select>
+
+        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+          <option value="">Otros documentos de Brightcove</option>
+          
+            
+              <option value="https://support.brightcove.com">Documentación Inicio</option>
+            
+          
+            
+              <option value="https://audience.support.brightcove.com">Audiencia de Brightcove</option>
+            
+          
+            
+              <option value="https://beacon.support.brightcove.com">Baliza Brightcove</option>
+            
+          
+            
+              <option value="https://campaign.support.brightcove.com">Campaña de Brightcove</option>
+            
+          
+            
+              <option value="https://engage.support.brightcove.com">Brightcove Engage</option>
+            
+          
+            
+              <option value="https://live.support.brightcove.com">Brightcove Live</option>
+            
+          
+            
+              <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+            
+          
+            
+              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+            
+          
+            
+              <option value="https://social.support.brightcove.com">Brightcove Social</option>
+            
+          
+            
+              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+            
+          
+            
+              <option value="https://player.support.brightcove.com">Desarrollo de jugadores de Brightcove</option>
+            
+          
+            
+              <option value="https://apis.support.brightcove.com">API para la plataforma de Video Cloud</option>
+            
+          
+            
+              <option value="https://sdks.support.brightcove.com">SDK de dispositivos de Video Cloud</option>
+            
+          
+            
+              <option value="https://integrations.support.brightcove.com">Integraciones y conectores CMS</option>
+            
+          
+            
+              <option value="https://general.support.brightcove.com">Información general de Video Cloud</option>
+            
+          
+            
+              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+            
+          
+        </select>
+
+        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+          <option value="">Weitere Brightcove Docs</option>
+          
+            
+              <option value="https://support.brightcove.com">Dokumentation Home</option>
+            
+          
+            
+              <option value="https://audience.support.brightcove.com">Brightcove Publikum</option>
+            
+          
+            
+              <option value="https://beacon.support.brightcove.com">Brightcove Leuchtfeuer</option>
+            
+          
+            
+              <option value="https://campaign.support.brightcove.com">Brightcove Kampagne</option>
+            
+          
+            
+              <option value="https://engage.support.brightcove.com">Brightcove Engage</option>
+            
+          
+            
+              <option value="https://live.support.brightcove.com">Brightcove Live</option>
+            
+          
+            
+              <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+            
+          
+            
+              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+            
+          
+            
+              <option value="https://social.support.brightcove.com">Brightcove Social</option>
+            
+          
+            
+              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+            
+          
+            
+              <option value="https://player.support.brightcove.com">Brightcove Spieler-Entwicklung</option>
+            
+          
+            
+              <option value="https://apis.support.brightcove.com">APIs für Video Cloud-Plattform</option>
+            
+          
+            
+              <option value="https://sdks.support.brightcove.com">Videocloud-Geräte-SDKs</option>
+            
+          
+            
+              <option value="https://integrations.support.brightcove.com">Integrationen und CMS-Konnektoren</option>
+            
+          
+            
+              <option value="https://general.support.brightcove.com">Video Cloud — Allgemeine Informationen</option>
+            
+          
+            
+              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+            
+          
+        </select>
+
+        <nav class="sidenav" id="side_nav">
+          
+            
+            <h5><a href="/index.html">ホーム</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/index.html">はじめに<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/get-started/getting-started-video-cloud-studio.html">ビデオクラウドスタジオの入門</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/getting-started-your-video-cloud-trial.html">Video Cloud トライアルの使用を開始する</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/navigating-brightcove-support-site.html">ブライトコーブサポートサイトのナビゲート</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/quick-start-video-cloud.html">ビデオクラウドへのクイックスタート</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/step-step-video-cloud-studio-publishing-workflow.html">ステップバイステップ:ビデオクラウドパブリッシングワークフロー</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">トレーニング:ビデオクラウド分析の概要</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud.html">トレーニング:ビデオクラウドの概要</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-video-cloud-basics.html">トレーニング:ビデオクラウドの基本</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/video-cloud-glossary.html">ビデオクラウド用語集</a></li>
+                  
+                
+                  
+                    <li><a href="/training/video-cloud-studio-training-videos.html">ビデオクラウドスタジオトレーニングビデオ</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/basics/index.html">基本を学びましょう<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-activating-and-deactivating-video.html">ビデオのアクティブ化と非アクティブ化</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-adding-user-video-cloud-account.html">Video Cloud アカウントへのユーザーの追加</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-capturing-video-poster-thumbnail-images.html">ビデオポスターとサムネイル画像のキャプチャ</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-manual-playlist.html">手動プレイリストの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-player.html">プレーヤーを作成する</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-playlist-player.html">プレイリストプレーヤーの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-creating-smart-playlist.html">スマートプレイリストの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-determining-how-much-video-being-watched.html">動画が視聴されている量の判別</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-determining-which-videos-have-most-views.html">視聴回数の多い動画を特定する</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-editing-basic-video-properties.html">基本的なビデオプロパティの編集</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-editing-video-properties-multiple-videos.html">複数のビデオのビデオプロパティの編集</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-organizing-videos-using-folders.html">フォルダを使用したビデオの整理</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-publishing-playlist-web.html">プレイリストを Web に公開する</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-publishing-single-video-web.html">1 つのビデオを Web に公開する</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-styling-player.html">プレーヤーのスタイリング</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-uploading-video-poster-thumbnail-images.html">動画ポスター＆サムネイル画像のアップロード</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-uploading-videos.html">動画をアップロード中</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/video-cloud-basics-viewing-brightcove-system-status-page.html">ブライトコーブのシステムステータスページの表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/general/index.html">一般情報<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/general/adding-facebook-button-brightcove-player.html">Facebook の「いいね！」ボタンをプレーヤーに追加する</a></li>
+                  
+                
+                  
+                    <li><a href="/general/best-practices-video-creating-transcoding-and-uploading-workflow.html">ベストプラクティス：トランスコーディングとアップロード</a></li>
+                  
+                
+                  
+                    <li><a href="/general/content-delivery-options.html">コンテンツ配信オプション</a></li>
+                  
+                
+                  
+                    <li><a href="/general/creating-audio-only-renditions-low-bandwidth-delivery.html">オーディオのみのレンディションの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/general/domains-and-ports-must-be-accessible-video-cloud.html">アクセス可能でなければならないドメインとポート</a></li>
+                  
+                
+                  
+                    <li><a href="/general/drm-output-protection-settings.html">DRM 出力保護の設定</a></li>
+                  
+                
+                  
+                    <li><a href="/general/enabling-longer-videos-youtube.html">YouTube で長い動画を有効にする</a></li>
+                  
+                
+                  
+                    <li><a href="/general/making-your-video-content-indexable.html">動画コンテンツをインデックス可能にする</a></li>
+                  
+                
+                  
+                    <li><a href="/general/optimal-video-dimensions.html">最適なビデオ寸法</a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-context-aware-encoding.html">コンテキスト認識エンコーディングの概要</a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-digital-rights-management-drm-video-cloud.html">概要:デジタル著作権管理 (DRM) </a></li>
+                  
+                
+                  
+                    <li><a href="/general/overview-dynamic-delivery.html">動的配信の概要</a></li>
+                  
+                
+                  
+                    <li><a href="/general/protecting-videos-hls-encryption.html">HLS 暗号化によるビデオの保護</a></li>
+                  
+                
+                  
+                    <li><a href="/general/resetting-your-studio-password.html">スタジオパスワードのリセット</a></li>
+                  
+                
+                  
+                    <li><a href="/general/sharing-videos-twitter-player-cards.html">Twitterプレイヤーカードに動画を共有する</a></li>
+                  
+                
+                  
+                    <li><a href="/general/studio-system-requirements.html">スタジオのシステム要件</a></li>
+                  
+                
+                  
+                    <li><a href="/general/supported-video-and-audio-formats-codecs-and-containers.html">サポートされているビデオおよびオーディオ形式</a></li>
+                  
+                
+                  
+                    <li><a href="/general/tls-media-player-and-api-urls.html">メディア、プレーヤー、API の URL の TLS </a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-cloud-architecture-overview.html">ビデオクラウドアーキテクチャの概要</a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-cloud-studio-cookies.html">ビデオクラウドスタジオクッキー</a></li>
+                  
+                
+                  
+                    <li><a href="/general/video-source-file-specifications-and-recommendations.html">ビデオソースファイルの仕様と推奨事項</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-360deg-videos.html">360° ビデオの操作</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-audio-content.html">音声のみのコンテンツの操作</a></li>
+                  
+                
+                  
+                    <li><a href="/general/working-multiple-video-cloud-accounts.html">複数のアカウントの操作</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/media/index.html">ビデオの管理<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/media/adding-audio-tracks-videos-using-media-module.html">ビデオへのオーディオトラックの追加</a></li>
+                  
+                
+                  
+                    <li><a href="/media/adding-captions-videos-using-media-module.html">動画へのキャプションの追加</a></li>
+                  
+                
+                  
+                    <li><a href="/media/adding-chapters-video.html">ビデオへのチャプターの追加</a></li>
+                  
+                
+                  
+                    <li><a href="/media/capturing-poster-and-thumbnail-images.html">ポスターとサムネイル画像のキャプチャ</a></li>
+                  
+                
+                  
+                    <li><a href="/media/configuring-video-availability.html">ビデオ可用性の設定</a></li>
+                  
+                
+                  
+                    <li><a href="/media/creating-and-managing-playlists.html">プレイリストの作成と管理</a></li>
+                  
+                
+                  
+                    <li><a href="/media/downloading-videos-video-cloud.html">Video クラウドから動画をダウンロードする</a></li>
+                  
+                
+                  
+                    <li><a href="/media/editing-video-properties-using-media-module.html">ビデオプロパティの編集</a></li>
+                  
+                
+                  
+                    <li><a href="/media/editing-video-properties-using-quick-edit.html">クイック編集を使用してプロパティを編集する</a></li>
+                  
+                
+                  
+                    <li><a href="/media/exporting-video-data.html">ビデオデータの書き出し</a></li>
+                  
+                
+                  
+                    <li><a href="/media/getting-started-media-module.html">メディアモジュールの使用開始</a></li>
+                  
+                
+                  
+                    <li><a href="/media/how-search-videos-and-playlists-media-module.html">動画と再生リストを検索する方法</a></li>
+                  
+                
+                  
+                    <li><a href="/media/increasing-quality-poster-and-thumbnail-images.html">ポスター画像の品質を上げる</a></li>
+                  
+                
+                  
+                    <li><a href="/media/introduction-playlists.html">プレイリストの概要</a></li>
+                  
+                
+                  
+                    <li><a href="/media/media-sharing-using-media-module.html">メディア共有</a></li>
+                  
+                
+                  
+                    <li><a href="/media/organizing-videos-using-folders.html">フォルダを使用したビデオの整理</a></li>
+                  
+                
+                  
+                    <li><a href="/media/overview-adding-captions-video.html">概要:動画にキャプションを追加する</a></li>
+                  
+                
+                  
+                    <li><a href="/media/replacing-video-source-file.html">ビデオソースファイルの置き換え</a></li>
+                  
+                
+                  
+                    <li><a href="/media/retranscoding-videos-using-media-module.html">動画の再トランスコーディング</a></li>
+                  
+                
+                  
+                    <li><a href="/media/setting-required-fields-videos.html">必須フィールドの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/media/styling-captions.html">キャプションのスタイル設定</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-poster-and-thumbnail-images.html">ポスターとサムネイル画像のアップロード</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-videos-using-upload-module.html">動画をアップロード中</a></li>
+                  
+                
+                  
+                    <li><a href="/media/uploading-videos-remote-urls.html">動画のリモートURLをアップロードする</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-cue-points-media-module.html">キューポイントの操作</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-multi-lingual-metadata.html">多言語メタデータの操作</a></li>
+                  
+                
+                  
+                    <li><a href="/media/working-remote-asset-videos.html">リモートアセットビデオの操作</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/cloud-playout/index.html">クラウドプレイアウトチャネルの管理<strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-overview.html">概要:クラウドプレイアウト</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/cloud-playout-stream-vod.html">クラウドプレイアウトチャネルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/using-channel-actions.html">チャネルアクションの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/enabling-server-side-ads.html">クラウドプレイアウトの収益化</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/generating-channel-embed-code.html">チャネル埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">チャネル出力と分析の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/players/index.html">プレーヤーの管理<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/players/adding-thumbnail-seeking-player.html">サムネイルシークの追加</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-overlay-using-overlay-plugin.html">プレーヤーオーバーレイの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-adobe-analytics-event-tracking.html">Adobe Analytics イベントトラッキングの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-google-analytics-event-tracking.html">Google アナリティクスのイベントトラッキングの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-advertising-using-players-module.html">プレーヤー広告の設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-content-restrictions.html">プレーヤーコンテンツ制限の設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-controls.html">プレーヤーコントロールの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-endscreen.html">プレーヤーエンドスクリーンの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-localization.html">プレーヤーローカリゼーションの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-playback-properties.html">プレーヤーの再生プロパティの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-player-plugins.html">プレーヤープラグインの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/configuring-social-properties-player.html">ソーシャルプロパティの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/generating-player-embed-code.html">プレーヤー埋め込みコードの生成</a></li>
+                  
+                
+                  
+                    <li><a href="/players/getting-started-players-module.html">プレイヤーズモジュールの開始にあたって</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-information-properties.html">プレイヤー情報プロパティの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-properties.html">プレーヤーのプロパティの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/setting-player-update-mode-and-version.html">プレーヤー更新モードの設定</a></li>
+                  
+                
+                  
+                    <li><a href="/players/styling-players.html">プレーヤーのスタイリング</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/publish/index.html">動画とプレーヤーの公開<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/publish/adding-3play-media-interactive-transcript-video.html">3Play メディアインタラクティブトランスクリプトの追加</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/adding-application-id-player-embed-code.html">埋め込みコードへのアプリケーション ID の追加</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/adding-brightcove-player-facebook-fan-page.html">Facebookのファンページにプレーヤーを追加する</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/changing-video-player-without-changing-embed-code.html">プレーヤーのビデオを変更する</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/choosing-correct-embed-code.html">正しい埋め込みコードの選択</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/creating-and-publishing-high-quality-screencasts.html">高品質のスクリーンキャストの作成と公開</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/deep-linking.html">ディープリンク</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/driving-video-views-through-email.html">電子メールによるビデオビューの促進</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/dynamically-assigning-videos-player.html">プレーヤーへのビデオの動的な割り当て</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/embedding-brightcove-player-google-sites-page.html">Google サイトページへのプレーヤーの埋め込み</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-player-wordpress-page.html">ワードプレスのページでプレーヤーを公開する</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-players-facebook-instant-articles.html">Facebook インスタント記事でのプレーヤーの公開</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-brightcove-players-joomla.html">Joomlaでプレーヤーを公開する</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-video-email.html">電子メールへのビデオの公開</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-videos-and-playlists-media-module.html">動画と再生リストの公開</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/publishing-videos-page-experience.html">ページ内エクスペリエンスへのビデオの公開</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/step-step-using-players-module-create-and-publish-player.html">ステップバイステップ:プレーヤーの作成と公開</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/using-multiple-players-one-page.html">1ページで複数のプレイヤーを使用する</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/using-reference-ids.html">参照 ID の使用</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/analytics/index.html">アナリティクスの確認<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/analytics/analytics-module-ui-glossary.html">分析モジュール UI 用語集</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/analytics-report-reference.html">アナリティクスレポートリファレンス</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/calculating-video-engagement-score.html">動画エンゲージメントスコアの計算</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/creating-custom-analytics-reports.html">カスタム分析レポートの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/engagement-report-reference.html">エンゲージメントレポートのリファレンス</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/exporting-data-analytics-module.html">データのエクスポート</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/faq-analytics-module.html">よくある質問:分析モジュール</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/getting-started-analytics-module.html">Analyticsモジュールの基礎</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/how-search-videos-analytics-module.html">動画を検索する方法</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/managing-scheduled-reports.html">スケジュール・レポートの管理</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/performance-report-reference.html">パフォーマンスレポートリファレンス</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/reviewing-player-event-data-google-analytics.html">Google アナリティクスでのプレーヤーイベントの確認</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/trending-now-report-reference.html">今トレンド分析レポートリファレンス</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/index.html">アカウントの管理<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/admin/authenticating-studio-users-using-single-sign.html">SSOを使用したStudioユーザーの認証</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/configuring-language-settings.html">言語設定の構成</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/configuring-server-side-ad-settings.html">サーバーサイド広告設定の構成</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-custom-metadata-fields.html">カスタムメタデータフィールドの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-ingest-profiles-context-aware-encoding.html">コンテキスト認識エンコーディングの取り込みプロファイルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-ingest-profiles-dynamic-delivery.html">動的配信用の取り込みプロファイルの作成</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/ingest-profiles-best-practices.html">プロファイルの取り込みに関するベストプラクティス</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-account-information.html">アカウント情報の管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-account-settings.html">アカウント設定の管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-api-authentication-credentials.html">API 認証資格情報の管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-ingest-profiles.html">取り込みプロファイルの管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-media-sharing-settings.html">メディア共有設定の管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-profile-information.html">プロファイル情報の管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">標準取り込みプロファイル（DD および CAE）</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-users.html">ユーザーの管理</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/using-directed-migration-tool-migrate-brightcove-smart-players.html">ダイレクト移行ツールの使用</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/viewing-billing-information.html">請求情報の表示</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/training/index.html"><strong>トレーニング+ </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/training/online-training-courses.html">すべてのオンライントレーニングコース</a></li>
+                  
+                
+                  
+                    <li><a href="/training/register-training.html">インストラクター主導トレーニングへの登録</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud.html">トレーニング:ビデオクラウドの概要</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-introduction-video-cloud-analytics.html">トレーニング:ビデオクラウド分析の概要</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-video-cloud-basics.html">トレーニング:ビデオクラウドの基本</a></li>
+                  
+                
+                  
+                    <li><a href="/training/video-cloud-studio-training-videos.html">ビデオクラウドスタジオトレーニングビデオ</a></li>
+                  
+                
+                  
+                    <li><a href="/training/brightcove-university.html">Brightcove Universityトレーニングコース</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/index.html">リリースノート<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/release-notes/video-cloud-studio-release-notes.html">ビデオクラウドスタジオリリースノート</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/index.html"><strong>サポート+ </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/brightcove-answer.html">ブライトコーブの回答</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">ブライトコーブのシステムステータスページの表示</a></li>
+                  
+                
+                  
+                    <li><a href="/support/contact-sales.html">営業へのお問い合わせ</a></li>
+                  
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">サポートケースを開く</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="ナビゲーションメニュー"/></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">ページコンテンツ</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="新しいタブで開く" style="margin-top:4em;width: 1.5em;"/></a>
+
+
+
+  
+    
+
+
+<!--
+  This content appears on:
+
+  https://apis.support.brightcove.com/general/integrating-your-cms-video-cloud.html
+
+  https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html
+
+  If you update in one place, you MUST update it in all!
+ -->
+
+<h1>動的配信およびコンテキスト認識エンコーディングの標準インジェストプロファイル</h1>
+<article class="bcls-article">
+  <summary>このトピックでは、動的配信およびコンテキスト認識エンコーディングを使用するときに提供される標準インジェストプロファイルのプロパティについて説明します。</summary>
+  <section class="bcls-section">
+    <h2 id="introduction">はじめに</h2>
+    <p><span translate="No">Dynamic Ingest API</span>を使用してダイナミックインジェストリクエストを作成するか、アップロードモジュールを使用してビデオをアップロードする場合は、Video Cloud の取り込みプロセスによって作成されるレンディションの数とタイプを決定するプロファイルを指定する必要があります。このトピックでは、<strong> HEVC（h.265）プロファイルを含む、<strong>動的配信およびコンテキスト認識エンコーディング</strong><strong>（CAE）</strong></strong>の各プロファイルに関する詳細情報を提供します。</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">注
+      <ul>
+        <li>コンテキスト対応エンコーディングと HEVC エンコーディングは、Video Cloud の有料アドオンです。これらの機能をアカウントに追加する場合は、アカウントマネージャーにお問い合わせください。</li>
+        <!-- <li>For non Dynamic Delivery accounts, see the <a href="https://apis.support.brightcove.com/ingest-profiles-legacy/references/standard-ingest-profiles-legacy-transcoding.html">Standard Ingest Profiles for Legacy Ingest</a> topic.</li> -->
+      </ul>
+    </aside>
+
+    <p>動的配信の概要は、<a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-delivery.html">動的配信の概要を参照してください</a>。</p>
+    <p>コンテキスト対応エンコーディングの概要については、「<a href="https://apis.support.brightcove.com/general/overview-context-aware-encoding.html">コンテキスト対応エンコーディングの概要</a>」を参照してください。</p>
+    <p>HEVCの概要については、<a href="/ingest-profiles/guides/hevc-video.html"> HEVCビデオを参照してください</a></p>
+    <p>注意:</p>
+    <ul>
+      <li>このドキュメントは、HEVCプロファイルを含む、通常の動的配信およびコンテキストアウェアエンコーディングのプロファイルを示しています</li>
+      <li>静的動的配信プロファイルとコンテキスト認識エンコーディングプロファイルの動作方法が異なるため、以下のプロファイルの詳細には異なる情報が表示されます。
+        <ul>
+          <li>静的動的配信プロファイルの場合、含まれるレンディションのリストが表示されます</li>
+          <li>コンテキスト対応エンコーディングプロファイルの場合、生成するレンディションの決定に使用される動的プロファイル設定の表が表示されます。</li>
+        </ul>
+      </li>
+    </ul>
+    <p>独自のカスタム取り込みプロファイルを作成することもできます。詳細については、次の該当するトピックを参照してください。</p>
+    <ul>
+      <li><a href="https://studio.support.brightcove.com/admin/creating-ingest-profiles-dynamic-delivery.html">動的配信用の取り込みプロファイルの作成</a></li>
+      <li><a href="https://studio.support.brightcove.com/admin/creating-ingest-profiles-context-aware-encoding.html">コンテキスト認識エンコーディングの取り込みプロファイルの作成</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Renditions">レンディション</h2>
+    <p>取り込みプロファイルで使用できるすべてのデフォルトレンディションの詳細については、以下の表を参照してください。</p>
+    <aside class="bcls-aside bcls-aside--information">注
+      <ol>
+        <li>これらは、動的配信プロファイルで使用できるすべてのレンディションです。それらのいくつかは、現在、標準プロファイルで使用されていない可能性があります。</li>
+        <li>表に表示されるフラグメントの長さとセグメントの長さは、配信される実際のセグメントの長さを反映していません。Dynamic Delivery は、特定の再生セッションの条件に応じて、異なる長さのセグメントを提供できます。デフォルトでは、HLS では 10 秒のセグメントが、DASでは 6 秒のセグメントが配信されます。これを見る<a href="#note1-2">以下に注意してください</a>フラグメントとセグメントの詳細については。</li>
+      </ol>
+    </aside>
+    <section class="bcls-subsection" id="Audio_renditions">
+      <h3>オーディオレンディション</h3>
+      <h4>セグメント化されたオーディオレンディション</h4>
+      <table class="bcls-table">
+        <caption class="bcls-caption--table">
+          セグメント化されたオーディオレンディション
+        </caption>
+        <thead class="bcls-table__head">
+          <tr>
+            <th>名前<sup><strong><a href="#note1-1">[1-1]</a></strong></sup></th>
+            <th>オーディオビットレート（kbps）</th>
+            <th>オーディオチャンネル</th>
+            <th>オーディオコーデック</th>
+            <th>強制キーフレームレート</th>
+            <th>フラグメント期間（ミリ秒）</th>
+            <th>トラックタイムスケールをフラグメント化</th>
+            <th>セグメントの長さ (秒)</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body" id="audioTableBody">
+        </tbody>
+      </table>
+      <h5>注</h5>
+      <ul style="list-style-type:none">
+        <li id="note1-1"><sup><strong>[1-1]</strong></sup>取り込みプロファイルでレンディションを参照する場合、<strong>名前の前には必ず接頭辞を付けてください<code translate="No">default/</code></strong> - 例えば：<code translate="No">default/audio128</code></li>
+        <li id="note1-2"><sup><strong>[1-2]</strong></sup>セグメントは、ダウンロード可能なファイルに関連付けられています。たとえば、HLS では、6 秒ごとにファイルをセグメント化できます。各セグメントには、他のセグメントとは独立してデコードおよび再生できる十分な情報が含まれています。HLS マニフェストには、各セグメントパスとその期間が表示されます。
+          <p>フラグメントとは、MP4 ファイルの断片を指します。フラグメント化されていないMP4には、ファイルの最初または最後にメタデータが含まれており、データ（<code translate="No">FTYP</code>、<code translate="No">MOOV</code>原子）メディアの前にデコードされます（<code translate="No">MDAT</code>原子）。ストリーミングを容易にするために、MP4ファイルを断片化して、メタデータと再生に必要なメディアがファイル内の断片にチャンクされるようにすることができます。これにより、プレイヤーは、メディアの特定のチャンクを簡単に検索できるだけでなく、異なるレンディション間のスムーズな移行を可能にします。フラグメント化は当初 DASH 用に作成されましたが、現在は HLS でもサポートされています。</p>
+          <p>セグメント（ファイル）に複数のフラグメントを含めることができるように、メディアをフラグメント化およびダッシュすることもできます。セグメントとフラグメントデュレーションを同じにするのが一般的です。ご了承ください<code translate="No">duration</code>そして<code translate="No">length</code>フラグメントとセグメントについて説明するときは、同じことを参照してください。</p>
+        </li>
+      </ul>
+      <h4>プログレッシブオーディオレンディション</h4>
+      <table class="bcls-table">
+        <caption class="bcls-caption--table">
+          プログレッシブオーディオレンディション
+        </caption>
+        <thead class="bcls-table__head">
+          <tr>
+            <th>名前<sup><strong><a href="#note2-1">[2-1]</a></strong></sup></th>
+            <th>オーディオビットレート（kbps）</th>
+            <th>オーディオチャンネル</th>
+            <th>オーディオコーデック</th>
+            <th>強制 AAC プロファイル</th>
+            <th>ビデオをスキップ</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body" id="progressiveAudioTableBody">
+        </tbody>
+      </table>
+      <h5>注</h5>
+      <ul style="list-style-type:none">
+        <li id="note2-1"><sup><strong>[2-1]</strong></sup>取り込みプロファイルでレンディションを参照する場合、<strong>名前の前には必ず接頭辞を付けてください<code translate="No">default/</code></strong> - 例えば：<code translate="No">default/audio128</code></li>
+      </ul>
+    </section>
+    <section class="bcls-subsection">
+      <h3 id="video_renditions">動画レンディション</h3>
+      <h4>ダイナミック配信動画レンディション</h4>
+      <table class="bcls-table">
+        <caption class="bcls-caption--table">
+          動画レンディション
+        </caption>
+        <thead class="bcls-table__head">
+          <tr>
+            <th>名前<sup><strong><a href="#note3-2">[3-2]</a></strong></sup></th>
+            <th>ビットレート（kbps）</th>
+            <th>高さ<sup><strong><a href="#note3-1">[3-1]</a></strong></sup>（px）</th>
+            <th>アスペクトモード</th>
+            <th>デコーダビットレートキャップ</th>
+            <th>デコーダバッファサイズ</th>
+            <th>強制キーフレームレート</th>
+            <th>フラグメント期間（ミリ秒）</th>
+            <th>H264 Bフレーム</th>
+            <th>H264 プロフィール</th>
+            <th>セグメントの長さ (秒)</th>
+            <th>スピード</th>
+            <th>動画コーデック</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body" id="videoRenditionsTableBody">
+        </tbody>
+      </table>
+      <h5>注</h5>
+      <ul style="list-style-type:none">
+        <li id="note4-1"><sup><strong>[4-1]</strong></sup>出力レンディションの幅は、入力ソースのアスペクト比に依存します</li>
+        <li id="note4-2"><sup><strong>[4-2]</strong></sup>取り込みプロファイルでレンディションを参照する場合、<strong>名前の前には必ず接頭辞を付けてください<code translate="No">default/</code></strong> - 例えば：<code translate="No">default/video2000</code></li>
+      </ul>
+      <h4>HEVCビデオレンディション<sup><strong></strong><a href="#note4-1"> [4-1]</a></strong></h4>
+      <table class="bcls-table">
+        <caption class="bcls-caption--table">
+          HEVCビデオレンディション<sup><strong></strong><a href="#note4-4"> [4-4]</a></strong></sup>
+        </caption>
+        <thead class="bcls-table__head">
+          <tr>
+            <th>名前<sup><strong><a href="#note4-3">[4-3]</a></strong></sup></th>
+            <th>ビットレート（kbps）</th>
+            <th>高さ<sup><strong><a href="#note4-2">[4-2]</a></strong></sup>（px）</th>
+            <th>アスペクトモード</th>
+            <th>デコーダビットレートキャップ</th>
+            <th>デコーダバッファサイズ</th>
+            <th>キーフレームレート</th>
+            <th>フラグメント期間（ミリ秒）</th>
+            <th>スピード</th>
+            <th>動画コーデック</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body" id="hevcTableBody">
+        </tbody>
+      </table>
+      <h5>注</h5>
+      <ul style="list-style-type:none">
+        <li id="note4-1"><sup><strong>[4-1]</strong></sup> HEVCサポートは有料のアドオンです。HEVCサポートに興味がある場合は、アカウントマネージャーにお問い合わせください</li>
+        <li id="note4-2"><sup><strong>[4-2]</strong></sup>幅も16：9のアスペクト比に含まれていますが、出力レンディションの実際の幅は入力ソースのアスペクト比によって異なります。</li>
+        <li id="note4-3"><sup><strong>[4-3]</strong></sup>取り込みプロファイルでレンディションを参照する場合、<strong>名前の前には必ず接頭辞を付けてください<code translate="No">default/</code></strong> - 例えば：<code translate="No">default/video2000</code></li>
+        <li id="note4-4"><sup><strong>[4-4]</strong></sup>表に示されているものに加えて、HEVCレンディションには次のプロパティがあります。
+          <ul>
+            <li><code translate="No">fixed_keyframe_interval: true</code></li>
+            <li><code translate="No">segment_seconds: 2</code></li>
+            <li><code translate="No">video_bframes: 3</code></li>
+            <li><code translate="No">video_codec_profile: main</code></li>
+            <li><code translate="No">video_reference_frames: 6</code></li>
+          </ul>
+        </li>
+      </ul>
+      <h4>プログレッシブビデオレンディション</h4>
+      <table class="bcls-table">
+        <caption class="bcls-caption--table">
+          プログレッシブレンディション
+        </caption>
+        <thead class="bcls-table__head">
+          <tr>
+            <th>名前<sup><strong><a href="#note5-2">[5-2]</a></strong></sup></th>
+            <th>動画ビットレート（kbps）</th>
+            <th>オーディオビットレート（kbps）</th>
+            <th>高さ<sup><strong><a href="#note5-1"> [5-1] </a></strong></sup> (ピクセル)</th>
+            <th>デコーダビットレートキャップ</th>
+            <th>デコーダバッファサイズ</th>
+            <th>H264 プロフィール</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body" id="progressiveTableBody">
+        </tbody>
+      </table>
+      <h5>注</h5>
+      <ul style="list-style-type:none">
+        <li id="note5-0"><sup><strong>[ 5-0] </strong></sup>上記のプロパティに加えて、すべてのプログレッシブレンディションには次の設定があります。
+          <ul>
+            <li>アスペクトモード:[保存]</li>
+            <li>スピード:3</li>
+            <li>ビデオコーデック:h264</li>
+            <li>アップスケール:偽</li>
+            <li>オーディオコーデック:aac</li>
+            <li>AAC プロファイル:aac-lc</li>
+          </ul>
+        </li>
+        <li id="note5-1"><sup><strong>[ 5-1] </strong></sup>出力レンディションの幅は入力ソースのアスペクト比に依存する</li>
+        <li id="note5-2"><sup><strong>[ 5-2] </strong></sup>取り込みプロファイルでレンディションを参照する場合は、<strong><code translate="No">default/</code>名前の前に必ず次のようになります</strong>。<code translate="No">default/progressive1200</code></li>
+      </ul>
+      <p>上記の表以外のビットレート/解像度のレンディションが必要な場合は、<a href="https://supportportal.brightcove.com/s/login/?language=en_US">ブライトコーブサポートにお問い合わせください</a>。</p>
+    </section>
+  </section>
+  <section class="bcls-section" id="Document_data">
+    <h2 id="profiles">プロファイル</h2>
+    <aside class="bcls-aside bcls-aside--information">注
+      <ul>
+        <li>標準プロファイルは複製できますが、<strong>編集することはできません</strong>。変更したバージョンが必要な場合は、カスタムプロファイルを作成する必要があります。</li>
+      </ul>
+    </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Summary_Table">取り込みプロファイルの概要</h2>
+    <p>次の表に、静的動的配信およびコンテキスト認識エンコーディングプロファイルの標準プロファイルの概要を示します。プロファイル名をクリックすると、そのプロファイルに含まれるレンディションの詳細が表示されます。実際に作成されるレンディションは、ソースビデオの品質によって異なります。</p>
+    <h3>静的動的配信プロファイル</h3>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">静的動的配信プロファイル</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>名前</th>
+          <th><br/>ビデオレンディション</th>
+          <th><br/>オーディオレンディション</th>
+          <th>HEVC</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body" id="dd_profile_summary">
+        <tr>
+          <td><a href="#multi-platform-standard-static">マルチプラットフォームスタンダード</a></td>
+          <td>6</td>
+          <td>3</td>
+          <td>いいえ</td>
+          <td>モバイル、デスクトップ、大画面など、幅広いコンテンツの種類と画面サイズに高品質のコンテンツを提供</td>
+        </tr>
+        <tr>
+          <td><a href="#multi-platform-standard-static-with-mp4">マルチプラットフォームスタンダード (MP4) </a></td>
+          <td>7</td>
+          <td>3</td>
+          <td>いいえ</td>
+          <td>モバイル、デスクトップ、シンジケーションのさまざまなプラットフォームで幅広いコンテンツタイプを配信</td>
+        </tr>
+        <tr>
+          <td><a href="#multi-platform-extended-static">マルチプラットフォーム拡張</a></td>
+          <td>7</td>
+          <td>4</td>
+          <td>いいえ</td>
+          <td>モバイル、デスクトップ、大画面など、幅広いコンテンツの種類と画面サイズに高品質のコンテンツを提供</td>
+        </tr>
+        <tr>
+          <td><a href="#multi-platform-extended-static-with-mp4">MP4で拡張されたマルチプラットフォーム</a></td>
+          <td>8</td>
+          <td>4</td>
+          <td>いいえ</td>
+          <td>モバイル、デスクトップ、大画面など、幅広いコンテンツの種類と画面サイズに高品質のコンテンツを提供</td>
+        </tr>
+        <tr>
+          <td><a href="#multi-platform-extended-static-hevc">マルチプラットフォーム拡張 HEVC </a></td>
+          <td>6</td>
+          <td>2</td>
+          <td>HEVC のみ</td>
+          <td>モバイルやデスクトップ、大型スクリーンなど、幅広いコンテンツタイプや画面サイズに対応する高品質コンテンツ</td>
+        </tr>
+        <tr>
+          <td><a href="#multi-platform-extended-static-hevc-with-mp4">マルチプラットフォーム拡張HEVC（MP4）</a></td>
+          <td>7</td>
+          <td>2</td>
+          <td>HEVC + プログレッシブ</td>
+          <td>モバイル、デスクトップ、大画面、シンジケーションなど、幅広いコンテンツタイプと画面サイズに高品質のコンテンツを提供</td>
+        </tr>
+        <tr>
+          <td><a href="#multi-platform-extended-static-mixed-codec">マルチプラットフォーム拡張スタティック H.264 + HEVC </a></td>
+          <td>14</td>
+          <td>2</td>
+          <td>HEVC + H.264</td>
+          <td>モバイル、デスクトップ、大画面など、幅広いコンテンツの種類と画面サイズに高品質のコンテンツを提供</td>
+        </tr>
+        <tr>
+          <td><a href="#multi-platform-extended-static-mixed-codec-with-mp4">マルチプラットフォーム拡張スタティック H.264 + MP4 および HEVC </a></td>
+          <td>15</td>
+          <td>2</td>
+          <td>HEVC、H.264、プログレッシブ</td>
+          <td>モバイル、デスクトップ、大画面、シンジケーションなど、幅広いコンテンツタイプと画面サイズに高品質のコンテンツを提供</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>コンテキスト対応エンコーディングプロファイル</h3>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">コンテキスト対応エンコーディングプロファイル</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>名前</th>
+          <th><br/>ビデオレンディション</th>
+          <th><br/>オーディオレンディション</th>
+          <th>HEVC</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body" id="hevc_profile_summary">
+        <tr>
+          <td><a href="#low-bandwidth-dynamic">制限された帯域幅（CAE）</a></td>
+          <td>2-6</td>
+          <td>3</td>
+          <td>いいえ</td>
+          <td>低帯域幅ゾーンのエンドユーザーに最適な再生エクスペリエンスを提供</td>
+        </tr>
+        <tr>
+          <td><a href="#low-bandwidth-dynamic-with-mp4">MP4で制限された帯域幅（CAE）</a></td>
+          <td>3-7</td>
+          <td>3</td>
+          <td>いいえ</td>
+          <td>低帯域幅ゾーンとシンジケーションでエンドユーザーに最適な再生体験を提供</td>
+        </tr>
+        <tr>
+          <td><a href="#multi-platform-standard-dynamic">マルチプラットフォーム標準 (CAE) </a></td>
+          <td>2-6</td>
+          <td>3</td>
+          <td>いいえ</td>
+          <td>モバイルとデスクトップのさまざまなプラットフォームで、幅広いコンテンツタイプを配信</td>
+        </tr>
+        <tr>
+          <td><a href="#multi-platform-standard-dynamic-with-mp4">MP4搭載マルチプラットフォーム標準 (CAE) </a></td>
+          <td>3-7</td>
+          <td>3</td>
+          <td>いいえ</td>
+          <td>モバイル、デスクトップ、シンジケーションのさまざまなプラットフォームで幅広いコンテンツタイプを提供</td>
+        </tr>
+        <tr>
+          <td><a href="#multi-platform-extended-dynamic">マルチプラットフォーム拡張 (CAE) </a></td>
+          <td>2-8</td>
+          <td>4</td>
+          <td>いいえ</td>
+          <td>モバイル、デスクトップ、大画面など、幅広いコンテンツの種類と画面サイズに高品質のコンテンツを提供</td>
+        </tr>
+        <tr>
+          <td><a href="#ulti-platform-extended-dynamic-with-mp4">MP4を使用したマルチプラットフォーム拡張（CAE）</a></td>
+          <td>3-9</td>
+          <td>4</td>
+          <td>いいえ</td>
+          <td>モバイル、デスクトップ、大画面、シンジケーションなど、幅広いコンテンツタイプと画面サイズに高品質のコンテンツを提供</td>
+        </tr>
+        <tr>
+          <td><a href="#ulti-platform-extended-dynamic-hevc">マルチプラットフォーム拡張 HEVC (CAE) </a></td>
+          <td>2-8</td>
+          <td>2</td>
+          <td>HEVC のみ</td>
+          <td>モバイル、デスクトップ、大画面など、幅広いコンテンツの種類と画面サイズに高品質のコンテンツを提供</td>
+        </tr>
+        <tr>
+          <td><a href="#ulti-platform-extended-dynamic-hevc-with-mp4">マルチプラットフォーム拡張 HEVC (CAE) と MP4 </a></td>
+          <td>3-9</td>
+          <td>2</td>
+          <td>HEVC + プログレッシブ</td>
+          <td>モバイル、デスクトップ、大画面、シンジケーションなど、幅広いコンテンツタイプと画面サイズに高品質のコンテンツを提供</td>
+        </tr>
+        <tr>
+          <td><a href="#multi-platform-extended-dynamic-hevc-mixed-codec">マルチプラットフォーム拡張 HEVC（CAE）混合コーデック</a></td>
+          <td>3-12</td>
+          <td>2</td>
+          <td>HEVC + H.264</td>
+          <td>モバイル、デスクトップ、大画面など、幅広いコンテンツの種類と画面サイズに高品質のコンテンツを提供</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <script src="https://general.support.brightcove.com/assets/js/shared-content/ingest-profiles/standard-profiles.js"></script>
+  <script src="https://general.support.brightcove.com/assets/js/shared-content/ingest-profiles/renditions-dynamic-delivery.js"></script>
+
+  <!-- <script src="/assets/js/ingest-profiles/references/standard-profiles.js"></script>
+   <script src="/assets/js/ingest-profiles/references/renditions-dynamic-delivery.js"></script> -->
+</article>
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">ページコンテンツ</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  ページの最終更新日：2021年2月1日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>ブライトコーブサポート</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">システムステータス</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">サポートへのお問い合わせ</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">ドキュメンテーション</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>トレーニング</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">オンラインコース</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">コースに登録する</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">Brightcove University</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">お問合せ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">プライバシー</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">利用規約</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/linkedin-gray.svg" style="height: 1.5rem;"/></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><img src="https://support.brightcove.com/site-assets/images/site/icons/twitter-gray.svg" style="height: 1.5rem;"/></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><img src="https://support.brightcove.com/site-assets/images/site/icons/facebook-gray.svg" style="height: 1.5rem;"/></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <style>
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>
